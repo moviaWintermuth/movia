@@ -1,0 +1,61 @@
+@import url(./var.css);
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--paddingforSectionTB) var(--paddingforSectionLR);
+    background: #363636;
+}
+
+/* Логотип футера */
+.footer__logo {
+    height: 70px;
+}
+
+/* Левая и правая части футера */
+.footer__container-left,
+.footer__container-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+}
+
+/* 📱 Адаптив для планшетов */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding: 40px var(--paddingforSectionLR);
+    }
+
+    .footer__logo {
+        height: 50px;
+    }
+
+    .footer__container-left,
+    .footer__container-right {
+        gap: 16px;
+        font-size: 14px;
+    }
+}
+
+/* 📱📱 Адаптив для мобильных устройств */
+@media (max-width: 480px) {
+    footer {
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .footer__logo {
+        height: 40px;
+    }
+
+    .footer__container-left,
+    .footer__container-right {
+        font-size: 13px;
+        gap: 14px;
+    }
+}

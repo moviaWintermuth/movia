@@ -1,0 +1,120 @@
+@import url(./var.css);
+:root {
+    --text-color: #414141;
+    --main-text-color: #141414;
+    --paddingforSectionLR: 2.4vw;
+    --paddingforSectionTB: 4vw;
+    --paddingforServiceMenu: 1vw;
+}
+
+main {
+    padding: 15vw var(--paddingforSectionLR) var(--paddingforSectionTB) var(--paddingforSectionLR);
+}
+h1 {
+    color: var(--main-text-color);
+    font-size: 35px;
+    font-weight: 800;
+}
+h2 {
+    color: var(--main-text-color);
+}
+main p {
+    color: var(--main-text-color);
+    font-size: 16px;
+    font-weight: 400;
+}
+.card__par {
+    color: var(--main-text-color);
+    font-weight: 600;
+}
+.text__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lang__container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: center;
+    padding: var(--paddingforSectionTB) 0;
+}
+
+.lang__card {
+    width: 23%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    border: 2px solid hsla(0, 0%, 18%, 0.6);
+    border-radius: 10px;
+    box-shadow: hsla(0, 0%, 0%, 0.20) 6px 6px 12px 1px;
+    transition: .3s;
+}
+
+.lang__card:hover {
+    transform: scale(1.03);
+    box-shadow: hsla(0, 0%, 0%, 0.20) 6px 6px 12px 9px;
+}
+
+.lang__card img {
+    width: 85px;
+    height: 85px;
+    filter: box-shadow(0px 6px 6px hsla(0, 0%, 0%, 0.20));    
+}
+
+.lang__card p {
+    text-align: center;
+}
+.ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--main-text-color);
+}
+.ul ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    font-weight: 500;
+}
+.ul p {
+    font-weight: 500;
+}
+
+/* Адаптация под планшеты */
+@media (max-width: 1024px) {
+    .lang__card {
+        width: 30%; /* 3 карточки в ряд */
+    }
+}
+
+/* Адаптация под телефоны */
+@media (max-width: 768px) {
+    main {
+        padding: 20vw 5vw;
+    }
+
+    .lang__card {
+        width: 45%; /* 2 карточки в ряд */
+        padding: 20px;
+    }
+    .lang__container-cards {
+        gap: 12px;
+    }
+}
+
+/* Очень маленькие экраны (одна карточка в ряд) */
+@media (max-width: 480px) {
+    .lang__card {
+        width: 100%;
+    }
+
+    .lang__card img {
+        width: 65px;
+        height: 65px;
+    }
+}

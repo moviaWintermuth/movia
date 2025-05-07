@@ -1,0 +1,58 @@
+@import url(./var.css);
+.text-right {
+    text-align: right;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15vw var(--paddingforSectionLR)  var(--paddingforSectionTB) var(--paddingforSectionLR);
+}
+h1 {
+    font-size: 35px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+    font-size: 20px;
+    font-weight: 500;
+}
+.container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+@media (max-width: 1024px) {
+    .order2 {
+        order: 2;
+    }
+    .container-text,
+    .container-img {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 22vw var(--paddingforSectionLR)  var(--paddingforSectionTB) var(--paddingforSectionLR);
+    }
+
+    .container-text {
+        font-size: clamp(14px, 4vw, 18px);
+    }
+}

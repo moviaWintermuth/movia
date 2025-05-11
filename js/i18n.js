@@ -7,7 +7,7 @@ i18next
     fallbackLng: 'de',
     debug: true,
     backend: {
-      loadPath: './i18n/index-{{lng}}.json'
+      loadPath: window.location.pathname.replace(/\/[^\/]*$/, '') + '/i18n/index-{{lng}}.json'
     }
   }, function(err, t) {
     updateContent();

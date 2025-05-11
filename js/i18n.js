@@ -1,5 +1,8 @@
 const savedLang = localStorage.getItem('lang') || 'de';
 
+// Вычисляем базовый путь (работает и локально, и на GitHub Pages)
+const basePath = window.location.pathname.split('/').slice(0, 2).join('/');
+
 i18next
   .use(i18nextHttpBackend)
   .init({
@@ -7,7 +10,7 @@ i18next
     fallbackLng: 'de',
     debug: true,
     backend: {
-      loadPath: window.location.pathname.replace(/\/[^\/]*$/, '') + '/i18n/index-{{lng}}.json'
+      loadPath: `${basePath}/i18n/index-{{lng}}.json`
     }
   }, function(err, t) {
     updateContent();

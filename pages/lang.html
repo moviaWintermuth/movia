@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.Sprachen</title>
+    <link rel="shortcut icon" href="../imgs/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/cookie.css">
+    <link rel="stylesheet" href="../css/lang.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/resetStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="https://unpkg.com/i18next@21/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@1.4.1/i18nextHttpBackend.min.js"></script>
+    <script src="../js/i18n.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header__logo">
+          <a href="../index.html"><img src="../imgs/logo.png" alt="logo muvia"></a>
+        </div>
+        <input type="checkbox" id="check" />
+        <label for="check" class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <div class="header__menu-wrapper">
+          <div class="header__menu">
+            <ul class="header__menu-list">
+              <li><a href="../index.html" class="header__link" data-i18n="back"></a></li>
+              <li><a href="pages/About.html" class="header__link" data-i18n="headerLink1"></a></li>
+              <li><a href="../index.html#l" class="header__link scroll-link" data-i18n="headerLink2"></a></li>
+              <li><a href="../index.html#k" class="header__link scroll-link" data-i18n="headerLink3"></a></li>
+              <li class="header__hover">
+                <a href="#" class="header__submenu-link" data-i18n="headerLink4"></a>
+                <ul class="header__submenu">
+                  <ul class="header__submenu">
+                    <li><a href="#" onclick="changeLanguage('de')">Deutsch</a></li>
+                    <li><a href="#" onclick="changeLanguage('en')">English</a></li>
+                    <li><a href="#" onclick="changeLanguage('ru')">Русский</a></li>
+                  </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </header>
+    <main>
+      <section class="text">
+          <div class="text__container">
+              <h1 class="fade-in" data-i18n="title">Wir sprechen Ihre Sprache – kompetent, kultursensibel und präzise</h1>
+              <p class="fade-in" data-i18n="desc1">Unser mehrsprachiges Team unterstützt Sie verlässlich, respektvoll und professionell. Dabei legen wir großen Wert auf kultursensible Kommunikation und sprachliche Genauigkeit.</p>
+              <p class="fade-in" data-i18n="desc2">Dolmetschdienst – zuverlässig und vertraulich<br>Unsere qualifizierten Dolmetscher:innen begleiten Sie bei Terminen mit Behörden, medizinischen Einrichtungen, Bildungsträgern oder Vermieter:innen.</p>
+              <h2 class="fade-in" data-i18n="offer_title">Unser Angebot umfasst:</h2>
+          </div>
+          <div class="lang__container-cards fade-in">
+              <div class="lang__card">
+                  <img src="../imgs/lang/flags/ru.svg" alt="">
+                  <p class="card__par" data-i18n="lang_ru">-Russisch</p>
+              </div>
+              <div class="lang__card">
+                  <img src="../imgs/lang/flags/ua.svg" alt="">
+                  <p class="card__par" data-i18n="lang_ua">-Ukrainisch</p>
+              </div>
+              <div class="lang__card">
+                  <img src="../imgs/lang/flags/gb-eng.svg" alt="">
+                  <p class="card__par" data-i18n="lang_en">-Englisch</p>
+              </div>
+              <div class="lang__card">
+                  <img src="../imgs/lang/flags/pl.svg" alt="">
+                  <p class="card__par" data-i18n="lang_pl">-Polnisch</p>
+              </div>
+              <div class="lang__card">
+                  <img src="../imgs/lang/flags/bg.svg" alt="">
+                  <p class="card__par" data-i18n="lang_bg">-Bulgarisch</p>
+              </div>
+              <div class="lang__card">
+                  <img src="../imgs/lang/flags/ro.svg" alt="">
+                  <p class="card__par" data-i18n="lang_ro">-Runänisch</p>
+              </div>
+              <div class="lang__card">
+                  <img src="../imgs/lang/flags/md.svg" alt="">
+                  <p class="card__par" data-i18n="lang_md">-Moldawisch</p>
+              </div>
+              <div class="lang__card">
+                  <img src="../imgs/lang/flags/hr.svg" alt="">
+                  <p class="card__par" data-i18n="lang_hr">-Kroatisch</p>
+              </div>
+          </div>
+      </section>
+      <section class="ul fade-in">
+          <ul>
+              <li data-i18n="item1">- Persönliche Begleitung zu wichtigen Gesprächen und Terminen</li>
+              <li data-i18n="item2">- Telefonische oder schriftliche Übersetzungshilfe bei Alltags- und Fachthemen</li>
+          </ul>
+          <p data-i18n="more_langs" class="fade-in">Weitere Sprachen auf Anfrage</p>
+      </section>
+    </main>
+    <footer>
+      <div class="footer__container-left">
+        <a href="../index.html"><img class="footer__logo" src="../imgs/logo_inv.png" alt=""></a>
+        <a class="link-custom" href="/pages/Datenschutzerklärung.html" data-i18n="datenschutzerklaerung">Datenschutzerklärung</a>
+      <a class="link-custom" href="/pages/Datenschutzerklärung.html#impressum" data-i18n="impressum">Impressum</a>
+    </div>
+    <div class="footer__container-right">
+      <p><a href="tel:+49 781 47448703" data-i18n="footerPhone">Telefon: +49 781 47448703</a></p>
+      <p><a href="https://maps.app.goo.gl/dbjb4HDFcZU6Ecbi7" data-i18n="footerAdress">Adresse: Albert-Schweitzer-Straße 7<br>77654 Offenburg</a></p>
+      <p><a href="mailto:movia.kundenservice@web.de" data-i18n="footerEmail">E-Mail: movia.kundenservice@web.de</a></p>
+      <a class="link-custom" target="_blank" href="https://maps.app.goo.gl/dbjb4HDFcZU6Ecbi7" data-i18n="footerMap">Karte anzeigen</a>
+      </div>
+    </footer>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/fade-in.js"></script>
+    <script src="../js/cookie.js"></script>
+</body>
+</html>

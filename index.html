@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movia</title>
+    <link rel="shortcut icon" href="./imgs/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/resetStyle.css">
+    <link rel="stylesheet" href="./css/var.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/cookie.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/i18next@21/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@1.4.1/i18nextHttpBackend.min.js"></script>
+    <script src="./js/i18n.js" defer></script>
+</head>
+<body>
+    <header>
+    <div class="header__logo">
+      <img src="./imgs/logo.png" alt="logo muvia">
+    </div>
+    <input type="checkbox" id="check" />
+    <label for="check" class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="header__menu-wrapper">
+      <div class="header__menu">
+        <ul class="header__menu-list">
+          <li><a href="pages/About.html" class="header__link" data-i18n="headerLink1"></a></li>
+          <li><a href="#l" class="header__link scroll-link" data-i18n="headerLink2"></a></li>
+          <li><a href="#k" class="header__link scroll-link" data-i18n="headerLink3"></a></li>
+          <li class="header__hover">
+            <a href="#" class="header__submenu-link" data-i18n="headerLink4"></a>
+            <ul class="header__submenu">
+              <li><a href="#de" onclick="changeLanguage('de')">Deutsch</a></li>
+              <li><a href="#en" onclick="changeLanguage('en')">English</a></li>
+              <li><a href="#ru" onclick="changeLanguage('ru')">Русский</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </header>
+
+    <main>
+      <section class="title fade-in" >
+        <h1 class="title__main-text" data-i18n="mainTitle">
+          Sprache verbindet – Integration beginnt mit Verständnis.
+        </h1>        
+        <p class="title__sub-text" data-i18n="subTitle">Movia Wintermuth & Partner – Übersetzungen, Dolmetschen, Integrationsbegleitung & mehr.
+          Für Menschen. Für Unternehmen.<br> Für ein Miteinander.
+          Wir sind ein modernes Dienstleistungsunternehmen mit Sitz in Offenburg, das sich auf
+          mehrsprachige Übersetzungs- und Dolmetschdienste sowie auf soziale und berufliche
+          Integrationsbegleitung spezialisiert hat. 
+          Mit einem erfahrenen Team von über 30
+          Mitarbeiter:innen bieten wir passgenaue Lösungen für Privatpersonen, Behörden, Unternehmen
+          und Organisationen.</p>
+      </section>
+      <section class="about fade-in" >
+        <div class="about__container">
+          <h2 class="about__title" data-i18n="aboutTitle">Über uns</h2>
+          <p class="about__text" data-i18n="aboutText">Movia Wintermuth & Partner wurde gegründet mit dem Ziel, Menschen mit
+            Migrationsgeschichte durch Sprache, Beratung und Begleitung zu stärken.
+            Unsere Arbeit basiert
+            auf Vertrauen, kulturellem Verständnis und konkreter Hilfe im Alltag. 
+            Ob bei Behördengängen,
+            Wohnraumsuche oder im beruflichen Umfeld – wir stehen Ihnen zur Seite.
+          </p>
+          <a class="about__link" href="./pages/About.html"><div class="circle"><span>></span></div><p class="about__link-text" data-i18n="aboutLink">Mehr erfahren</p></a>
+        </div>
+      </section>
+      <section class="facts fade-in">
+        <h2 data-i18n="factsTitle">Unsere Stärken</h2>
+        <div class="facts__container">
+          <div class="facts__card">
+            <img src="./imgs/cards/user 1.svg" alt="">
+            <p class="facts__par" data-i18n="factsPar1">
+              30+<br>qualifizierte Fachkräfte<br>sowie Sacharbeiter:innen
+            </p>
+          </div>
+          <div class="facts__card">
+            <img src="./imgs/cards/language 1.svg" alt="">
+            <p class="facts__par" data-i18n="factsPar2">
+              Mehrsprachigkeit in über 8<br>Sprachen
+            </p>
+          </div>
+          <div class="facts__card">
+            <img src="./imgs/cards/flash 1.svg" alt="">
+            <p class="facts__par" data-i18n="factsPar3">
+              Hohe Flexibilität & schnelle<br>Verfügbarkeit
+            </p>
+          </div>
+          <div class="facts__card">
+            <img src="./imgs/cards/briefcase 1.svg" alt="">
+            <p class="facts__par" data-i18n="factsPar4">
+              - Expertise in sozialen,<br>rechtlichen & beruflichen<br>Kontexten
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="services fade-in">
+        <div class="services__container">
+          <h2 id="l" data-i18n="servicesTitle">Unsere Leistungen</h2>
+          <p class="services__text" data-i18n="servicesText">
+            Bei Movia Wintermuth & Partner bieten wir maßgeschneiderte Lösungen in den Bereichen Übersetzungs- und Dolmetscherdienste sowie Unterstützung bei der Wohnungssuche und Arbeitsvermittlung. Unser erfahrenes Team steht Ihnen als zuverlässiger Partner in sprachlichen und organisatorischen Belangen zur Seite.
+
+            Mit Übersetzungsdiensten in mehreren Sprachen, darunter Russisch, Ukrainisch, Englisch, Polnisch, Bulgarisch, Moldawisch, Rumänisch und Kroatisch, sorgen wir für eine präzise und kulturell angepasste Kommunikation. Zudem bieten wir umfassende Beratungsleistungen für internationale Klienten und Unternehmen.
+
+            Vertrauen Sie auf unsere Expertise und lassen Sie uns gemeinsam Ihre Ziele erreichen.
+          </p>
+        </div>
+        <div class="services__container">
+          <img src="./imgs/services.png" alt="">
+        </div>
+      </section>
+      <section class="services__menu fade-in">
+        <div class="services__menu-container">
+          <div class="services__item-menu">
+            <h3 data-i18n="servicesMenuTitle1">Sprachdienstleistungen</h3>
+            <div class="services__img">
+              <img src="./imgs/down-arrow.png" alt="">
+            </div>
+          </div>
+          <div class="services__ul">
+            <ul>
+              <li data-i18n="servicesMenu1">- Übersetzungen (Dokumente, Urkunden, Verträge)</li>
+              <li data-i18n="servicesMenu2">- Fachübersetzungen (medizinisch, technisch)</li>
+              <li data-i18n="servicesMenu3">- <a class="link-custom" href="./pages/lang.html">Dolmetschen:</a> vor Ort, telefonisch, per Video</li>
+            </ul>
+          </div>
+        </div>
+        <div class="services__menu-container">
+          <div class="services__item-menu">
+            <h3 data-i18n="servicesMenuTitle2">Integrationsbegleitung & Einbürgerung</h3>
+            <div class="services__img">
+              <img src="./imgs/down-arrow.png" alt="">
+            </div>
+          </div>
+          <div class="services__ul">
+            <ul>
+              <li data-i18n="servicesMenu4">- Beratung zu Aufenthaltsrecht, Sozialleistungen und Orientierung im Alltag</li>
+              <li data-i18n="servicesMenu5">- Unterstützung bei Sprachkursen, Integrationskursen und gesellschaftlicher Teilhabe</li>
+              <li data-i18n="servicesMenu6">- Hilfe bei der Antragstellung, Prüfung der Voraussetzungen und Zusammenstellung der Unterlagen</li>
+              <li data-i18n="servicesMenu7">- Vorbereitung auf den Einbürgerungstest sowie Erläuterung von Rechten und Pflichten</li>
+            </ul>
+          </div>
+        </div>
+        <div class="services__menu-container">
+          <div class="services__item-menu">
+            <h3 data-i18n="servicesMenuTitle3">Wohnen & Immobilien</h3>
+            <div class="services__img">
+              <img src="./imgs/down-arrow.png" alt="">
+            </div>
+          </div>
+          <div class="services__ul">
+            <ul>
+              <li data-i18n="servicesMenu8">- Hilfe bei der Wohnungssuche & Mietangelegenheiten</li>
+              <li data-i18n="servicesMenu9">- Vermittlung an soziale Wohnhilfen & Vermieter:innen</li>
+              <li data-i18n="servicesMenu10">- Begleitung bei Einzug, Umzug & Wohnraumerhalt</li>
+            </ul>
+          </div>
+        </div>
+        <div class="services__menu-container">
+          <div class="services__item-menu">
+            <h3 data-i18n="servicesMenuTitle4">Berufsbegleitung & Ausbildung</h3>
+            <div class="services__img">
+              <img src="./imgs/down-arrow.png" alt="">
+            </div>
+          </div>
+          <div class="services__ul">
+            <ul>
+              <li data-i18n="servicesMenu11">- Bewerbungshilfe & Vermittlung in Arbeit/Ausbildung</li>
+              <li data-i18n="servicesMenu12">- Coaching & Vorbereitung auf Vorstellungsgespräche</li>
+              <li data-i18n="servicesMenu13">- Nachbetreuung bei Ausbildungsabbrüchen oder Jobwechsel</li>
+            </ul>
+          </div>
+        </div>
+        <div class="services__menu-container">
+          <div class="services__item-menu">
+            <h3 data-i18n="servicesMenuTitle5">Unternehmen & Institutionen</h3>
+            <div class="services__img">
+              <img src="./imgs/down-arrow.png" alt="">
+            </div>
+          </div>
+          <div class="services__ul">
+            <ul>
+              <li data-i18n="servicesMenu14">- Dolmetsch- und Übersetzungsdienste für Personalgespräche, Schulungen und Kund:innenkontakte</li>
+              <li data-i18n="servicesMenu15">- Interkulturelle Beratung zur Stärkung von Vielfalt und Zusammenarbeit im Betrieb</li>
+              <li data-i18n="servicesMenu16">- Begleitung bei der Integration von Mitarbeitenden mit Migrationshintergrund</li>
+              <li data-i18n="servicesMenu17">- Unterstützung bei der Vermittlung von Arbeitskräften und Anerkennung ausländischer Qualifikationen</li>
+            </ul>
+          </div>
+        </div>
+        <div class="services__menu-container">
+          <div class="services__item-menu">
+            <h3 data-i18n="servicesMenuTitle6">Für Familien, Kinder und Jugendliche</h3>
+            <div class="services__img">
+              <img src="./imgs/down-arrow.png" alt="">
+            </div>
+          </div>
+          <div class="services__ul">
+            <ul>
+              <li data-i18n="servicesMenu18">- Dolmetschdienste für Familienangelegenheiten</li>
+              <li data-i18n="servicesMenu19">- Unterstützung bei der Anmeldung von Kindern in Kitas und Schulen</li>
+              <li data-i18n="servicesMenu20">- Beratung bei Erziehungsfragen und Herausforderungen im Familienalltag</li>
+              <li data-i18n="servicesMenu21">- Vermittlung von Freizeit- und Bildungsangeboten für Kinder und Jugendliche</li>
+            </ul>
+          </div>
+        </div>
+        <div class="services__menu-container">
+          <div class="services__item-menu">
+            <h3 data-i18n="servicesMenuTitle7">Migrationsbegleitung</h3>
+            <div class="services__img">
+              <img src="./imgs/down-arrow.png" alt="">
+            </div>
+          </div>
+          <div class="services__ul">
+            <ul>
+              <li data-i18n="servicesMenu22">- Individuelle Beratung zu Aufenthalt, Asyl und Familiennachzug</li>
+              <li data-i18n="servicesMenu23">- Unterstützung bei Behördenkontakten und Antragsstellungen</li>
+              <li data-i18n="servicesMenu24">- Hilfestellung beim Zugang zu Bildung, Arbeit und gesellschaftlicher Teilhabe</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="kontact fade-in">
+        <h2 id="k" data-i18n="kontactTitle">Kontakt</h2>
+        <div class="kontact__container">
+          <div class="kontact__card">
+            <a href="https://maps.app.goo.gl/dbjb4HDFcZU6Ecbi7" target="_blank"><img src="./imgs/kontact/maps-and-flags.png" alt=""></a>
+            <h2 data-i18n="kontactAdress">Adresse</h2>
+            <p class="card__text">
+            <a href="https://maps.app.goo.gl/dbjb4HDFcZU6Ecbi7" target="_blank">Albert-Schweitzer-Straße 7<br>77654 Offenburg</a>
+            </p>
+          </div>
+          <div class="kontact__card">
+            <a href="tel:+4978147484703" target="_blank"><img src="./imgs/kontact/telefon.png" alt=""></a>
+            <h2 data-i18n="kontactPhone">Telefon</h2>
+            <p class="card__text"><a href="tel:+4978147484703" target="_blank">0781 47448703</a></p>
+          </div>
+          <div class="kontact__card">
+            <a href="mailto:movia.kundenservice@web.de" target="_blank"><img src="./imgs/kontact/email.svg" alt=""></a>
+            <h2 data-i18n="kontactEmail">E-mail</h2>
+            <p class="card__text">
+              <a href="mailto:movia.kundenservice@web.de" target="_blank">movia.kundenservice@web.de</a>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="kontactQR fade-in">
+        <div class="kontactQR__container">
+          <div class="QR">
+            <h3>Telegram</h3>
+            <a href="https://t.me/movia_kundenservice" target="_blank"><img class="QRcode" src="./imgs/kontact/QR/telegram.svg" alt=""></a>
+          </div>
+          <div class="QR">
+            <h3>Instagram</h3>
+            <a href="https://www.instagram.com/movia.service?igsh=OGU0NmxmNGpiOGoz&utm_source=qr" target="_blank"><img class="QRcode" src="./imgs/kontact/QR/instagram.svg" alt=""></a>
+          </div>
+          <div class="QR">
+            <h3>Viber</h3>
+            <a href="viber://add?number=4917625412730" target="_blank"><img class="QRcode" src="./imgs/kontact/QR/viber.svg" alt=""></a>
+          </div>
+          <div class="QR">
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/4917625412730" target="_blank"><img class="QRcode" src="./imgs/kontact/QR/whatsapp.svg" alt=""></a>
+          </div>
+        </div>
+      </section>
+      <section class="form fade-in">
+        <div class="form__container">
+          <div class="form__container-left">
+            <h3 data-i18n="formTitle">Ihre Nachricht</h3>
+            <form id="contact-form">
+              <div class="form__input-group">
+                <label class="form__label" for="user_name" data-i18n="formName">Name: <span class="a r"></span></label>
+                <input name="user_name" id="user_name" class="input" type="text" required>
+              </div>
+              
+              <div class="form__input-group">
+                <label class="form__label" for="user_email" data-i18n="formEmail">E-Mail-Adresse:<span class="a r"></span></label>
+                <input name="user_email" id="user_email" class="input" type="email" required>
+              </div>
+            
+              <div class="form__input-group">
+                <label class="form__label" for="user_phone" data-i18n="formPhone">Telefonnummer:</label>
+                <input name="user_phone" id="user_phone" class="input" type="tel">
+              </div>
+            
+              <div class="form__radioBTN">
+                <label class="label-radioBTN" for="user_region" data-i18n="formDistrict">Landkreis:<span class="a r"></span></label>
+                <div class="radio-button-container">
+                  <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio1" name="user_region" value="Ortenaukreis" required>
+                    <label class="radio-button__label" for="radio1">
+                      <span class="radio-button__custom"></span>
+                      <p data-i18n="radio1">ich wohne im Ortenaukreis</p>
+                    </label>
+                  </div>
+                  <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio2" name="user_region" value="Anderer Landkreis">
+                    <label class="radio-button__label" for="radio2">
+                      <span class="radio-button__custom"></span>
+                      <p data-i18n="radio2">ich wohne in einem anderen Landkreis</p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="form__input-group">
+                <label class="form__label" for="user_address" data-i18n="formAddress">PLZ, Wohnort:<span class="a r"></span></label>
+                <input
+                  placeholder="Durch die Angabe Ihrer Adresse helfen Sie uns bei der Weiterleitung Ihres Anliegens."
+                  name="user_address"
+                  id="user_address"
+                  class="input"
+                  type="text"
+                  required
+                >
+              </div>
+            
+              <div class="form__input-group">
+                <label class="form__label" for="department" data-i18n="formDepartment">Abteilungen:<span class="a r"></span></label>
+                <select name="department" id="department" class="input" required>
+                  <option value="" disabled selected hidden>Bitte eine Abteilung auswählen</option>
+                  <option value="dolmetschen">Dolmetschen</option>
+                  <option value="uebersetzen">Übersetzen von Dokumenten</option>
+                  <option value="migrationsbratung">Migrationsbratung</option>
+                  <option value="integration">Integration/Einbürgerung</option>
+                  <option value="immobilien">Immobilien /Wohnungssuche</option>
+                  <option value="berufsbekleidung">Berufsbekleidung/Ausbildung</option>
+                  <option value="hausaufgabenhilfe">Hausaufgabenhilfe/Kurshilfe</option>
+                  <option value="formularhilfe">Formularhilfe/Anträge</option>
+                  <option value="finanzen">Finanzen</option>
+                  <option value="familien">Familien</option>
+                  <option value="senioren">Senioren</option>
+                  <option value="unternehmen">Unternehmen /Institutionen</option>
+                  <option value="kinder">Kinder und Jugendliche</option>
+                  <option value="buergergeld">Allgemein zum Bürgergeld</option>
+                  <option value="sozialgeld">Allgemein zum Sozialgeld</option>
+                  <option value="jobcenter">Allgemeine Fragen zum Jobcenter</option>
+                  <option value="schule">Allgemeine Frage Schule und Kultur</option>
+                  <option value="migrationsamt">Allgemeine Fragen, Migrationsamt</option>
+                  <option value="jugendamt">Allgemeine Fragen Jugendamt</option>
+                  <option value="buergerbuero">Allgemeine Fragen , Bürgerbüro.</option>
+                  <option value="auslaenderbuero">Allgemeine Fragen, Ausländerbüro,</option>
+                  <option value="sonstiges">Sonstiges</option>
+                </select>
+              </div>
+            
+              <div class="form__input-group">
+                <label class="form__label" for="contact_person" data-i18n="formContactPerson">Ansprechperson:</label>
+                <input
+                  placeholder="Bitte nennen Sie hier, falls bekannt, die zuständige Person."
+                  name="contact_person"
+                  id="contact_person"
+                  class="input"
+                  type="text"
+                >
+              </div>
+            
+              <div class="custom-textarea-group">
+                <label class="custom-label" for="message" data-i18n="formMessage">Nachricht:</label>
+                <textarea name="message" id="message" class="custom-textarea" required></textarea>
+              </div>
+            
+              <!-- <div class="form__input-group">
+                <input type="file" id="input-file" name="attachments" class="file-input" multiple>
+              </div> -->
+            
+              <div class="form__input-group-checkbox">
+                <label class="container">
+                  <input type="checkbox" id="form__checkbox" required>
+                  <svg viewBox="0 0 64 64" height="20px" width="20px">
+                    <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" class="path"></path>
+                  </svg>
+                </label>
+                <p data-i18n="formCheckbox">Ich habe die <a href="./pages/Datenschutzerklärung.html" class="link-custom">Datenschutzerklärung</a> gelesen und bin damit einverstanden.<span class="a r"></span></p>
+              </div>
+            
+              <div class="form__input-group">
+                <button type="submit" class="form__button-submit" data-i18n="formSubmit">Nachricht absenden</button>
+              </div>
+            </form>    
+          </div>
+          <div class="form__container-right">
+            <div class="form__schedule">
+              <h2 data-i18n="scheduleTitle">Allgemeine Servicezeiten</h2>
+              <div class="form__schedule-container">
+                <div class="form__schedule-day" data-i18n="scheduleDay">Montag bis Freitag<br>Montag bis Donnerstag</div>
+                <div class="form__schedule-time" data-i18n="scheduleTime">08:30 - 12:00 Uhr<br>14:00 - 16:00 Uhr</div>
+              </div>
+              <p data-i18n="scheduleNote">nur nach vorheriger Terminvereinbarung.<br>
+                Termine sind auch außerhalb der Servicezeiten möglich.</p>
+            </div>
+            <div class="form__map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10579.103198449486!2d7.9477796!3d48.4800139!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796d37463a10825%3A0xbe5ae861072b546!2sAlbert-Schweitzer-Stra%C3%9Fe%207%2C%2077654%20Offenburg!5e0!3m2!1sde!2sde!4v1746646000851!5m2!1sde!2sde" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer__container-left">
+        <img class="footer__logo" src="./imgs/logo_inv.png" alt="">
+        <a class="link-custom" href="/pages/Datenschutzerklärung.html" data-i18n="datenschutzerklaerung">Datenschutzerklärung</a>
+        <a class="link-custom" href="/pages/Datenschutzerklärung.html#impressum" data-i18n="impressum">Impressum</a>
+      </div>
+      <div class="footer__container-right">
+        <p><a href="tel:+49 781 47448703" data-i18n="footerPhone">Telefon: +49 781 47448703</a></p>
+        <p><a href="https://maps.app.goo.gl/dbjb4HDFcZU6Ecbi7" data-i18n="footerAdress">Adresse: Albert-Schweitzer-Straße 7<br>77654 Offenburg</a></p>
+        <p><a href="mailto:movia.kundenservice@web.de" data-i18n="footerEmail">E-Mail: movia.kundenservice@web.de</a></p>
+        <a class="link-custom" target="_blank" href="https://maps.app.goo.gl/dbjb4HDFcZU6Ecbi7" data-i18n="footerMap">Karte anzeigen</a>
+      </div>
+    </footer>
+    <script >
+      document.querySelectorAll('.scroll-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    target.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center' // Центрирует по вертикали
+    });
+  });
+});
+
+    </script>
+    <script src="./js/scroll.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+              publicKey: "eLZ-DiArZYONgQkrZ",
+            });
+        })();
+    </script>
+    <script src="./js/email.js"></script>    
+    <script src="./js/main.js"></script>
+    <script src="./js/fade-in.js"></script>
+    <script src="./js/cookie.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.Über uns</title>
+    <link rel="shortcut icon" href="../imgs/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/resetStyle.css">
+    <link rel="stylesheet" href="../css/var.css">
+    <link rel="stylesheet" href="../css/cookie.css">
+
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="https://unpkg.com/i18next@21/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@1.4.1/i18nextHttpBackend.min.js"></script>
+    <script src="../js/i18n.js" defer></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16/dist/smooth-scroll.polyfills.min.js"></script> -->
+</head>
+<body>
+  <header>
+    <div class="header__logo">
+      <a href="../index.html"><img src="../imgs/logo.png" alt="logo muvia"></a>
+    </div>
+    <input type="checkbox" id="check" />
+    <label for="check" class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="header__menu-wrapper">
+      <div class="header__menu">
+        <ul class="header__menu-list">
+          <li><a href="../index.html" class="header__link" data-i18n="back"></a></li>
+          <li><a href="../pages/About.html" class="header__link" data-i18n="headerLink1"></a></li>
+          <li><a href="../index.html#l" class="header__link scroll-link" data-i18n="headerLink2"></a></li>
+          <li><a href="../index.html#k" class="header__link scroll-link" data-i18n="headerLink3"></a></li>
+          <li class="header__hover">
+            <a href="#" class="header__submenu-link" data-i18n="headerLink4"></a>
+            <ul class="header__submenu">
+              <li><a href="#" onclick="changeLanguage('de')">Deutsch</a></li>
+              <li><a href="#" onclick="changeLanguage('en')">English</a></li>
+              <li><a href="#" onclick="changeLanguage('ru')">Русский</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </header>
+    <main>
+      <section class="container fade-in">
+        <div class="container-text">
+          <h1 data-i18n="aboutUsTitle">Über uns</h1>
+          <p data-i18n="aboutUsText">Movia Wintermuth & Partner ist weit mehr als ein klassischer Dienstleister – wir verstehen uns als Brückenbauer zwischen Menschen, Kulturen und Systemen. Unser engagiertes Team aus über 30 qualifizierten Mitarbeiterinnen und Mitarbeitern arbeitet tagtäglich daran, individuelle Lebenslagen mit praktischer Unterstützung zu verbessern – sprachlich, organisatorisch und sozial.</p>
+        </div>
+        <div class="container-img">
+          <img src="../imgs/about/img1.png" alt="">
+        </div>
+      </section>
+      <section class="container fade-in">
+        <div class="container-img order2"><img src="../imgs/about/img2.png" alt=""></div>
+        <div class="container-text text-right" data-i18n="visionText">Gegründet mit der Vision, gesellschaftliche Teilhabe für alle zugänglich zu machen, bieten wir heute ein umfassendes Spektrum an interkulturellen Dienstleistungen – von professionellem Dolmetschen und Übersetzungen über Wohnungs- und Arbeitssuche bis hin zu Begleitung bei Ämtern, Behörden oder Vorstellungsgesprächen.</div>
+      </section>
+      <section class="container fade-in">
+        <div class="container-text" data-i18n="multilingualTeamText">Unser multilinguales Team spricht unter anderem Russisch, Ukrainisch, Englisch, Polnisch, Bulgarisch, Rumänisch und Kroatisch – so stellen wir sicher, dass unsere Klient:innen nicht nur verstanden, sondern auch wirklich verstanden werden.</div>
+        <div class="container-img"><img src="../imgs/about/img3.png" alt=""></div>
+      </section>
+      <section class="container fade-in">
+        <div class="container-img order2"><img src="../imgs/about/img4.png" alt=""></div>
+        <div class="container-text text-right" data-i18n="dailyWorkText">Unsere tägliche Arbeit ist geprägt von Empathie, Pragmatismus und lösungsorientiertem Denken. Dabei gehen wir auf individuelle Anliegen mit der nötigen Sensibilität ein – sei es bei älteren Menschen, Migrant:innen, Familien oder Unternehmen.</div>
+      </section>
+      <section class="container fade-in">
+        <div class="container-text" data-i18n="reliablePartnerText">Als zuverlässiger Ansprechpartner für Integrationsarbeit, Alltagsunterstützung und mehrsprachige Kommunikation sind wir regional stark vernetzt – und stolz darauf, eine Brücke in eine selbstbestimmte Zukunft zu sein.</div>
+        <div class="container-img"><img src="../imgs/about/img5.png" alt=""></div>
+      </section>
+    </main>
+      <footer>
+        <div class="footer__container-left">
+          <a href="../index.html"><img class="footer__logo" src="../imgs/logo_inv.png" alt=""></a>
+          <a class="link-custom" href="/pages/Datenschutzerklärung.html" data-i18n="datenschutzerklaerung">Datenschutzerklärung</a>
+        <a class="link-custom" href="/pages/Datenschutzerklärung.html#impressum" data-i18n="impressum">Impressum</a>
+      </div>
+      <div class="footer__container-right">
+        <p><a href="tel:+49 781 47448703" data-i18n="footerPhone">Telefon: +49 781 47448703</a></p>
+        <p><a href="https://maps.app.goo.gl/dbjb4HDFcZU6Ecbi7" data-i18n="footerAdress">Adresse: Albert-Schweitzer-Straße 7<br>77654 Offenburg</a></p>
+        <p><a href="mailto:movia.kundenservice@web.de" data-i18n="footerEmail">E-Mail: movia.kundenservice@web.de</a></p>
+        <a class="link-custom" target="_blank" href="https://maps.app.goo.gl/dbjb4HDFcZU6Ecbi7" data-i18n="footerMap">Karte anzeigen</a>
+        </div>
+      </footer>
+      <script src="../js/scroll.js"></script>
+      <script src="../js/fade-in.js"></script>      
+      <script src="../js/cookie.js"></script>
+</body>
+</html>

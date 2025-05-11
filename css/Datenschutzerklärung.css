@@ -1,0 +1,43 @@
+@import url(../css/var.css);
+
+main {
+    padding: 15vw var(--paddingforSectionLR)  var(--paddingforSectionTB) var(--paddingforSectionLR);
+}
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+section p, section ul{
+    margin-left: 16px;
+}
+section ul {
+    list-style: none;
+}
+section ul  li::before {
+    content: "-";
+    margin-right: 8px;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.text-p {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.line {
+    width: 100%;
+    height: 4px;
+    margin: 24px 0;
+    border-radius: 8px;
+    background-color: gray;
+    
+}
+@media (max-width: 768px) {
+    main {
+        padding: 20vh var(--paddingforSectionLR)  var(--paddingforSectionTB) var(--paddingforSectionLR);
+    }
+}

@@ -48,7 +48,9 @@ footer {
         padding: 30px 20px;
         gap: 25px;
     }
-
+    .footer__container-left {
+        align-items: center;
+    }
     .footer__logo {
         min-width: 150px;
     }

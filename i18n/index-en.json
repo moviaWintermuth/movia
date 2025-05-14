@@ -69,7 +69,7 @@
   "scheduleTime": "08:30 - 12:00<br>14:00 - 16:00",
   "scheduleNote": "By appointment only.<br>Appointments are also possible outside of service hours.",
   "footerPhone": "Phone: +49 781 47448703",
-  "footerAdress": "Address: Albert-Schweitzer-Straße 7, 77654 Offenburg",
+  "footerAdress": "Address: Albert-Schweitzer-Straße 7<br>{77654 Offenburg",
   "footerEmail": "Email: movia.kundenservice@web.de",
   "footerMap": "View Map",
   "datenschutzerklaerung": "Imprint",
@@ -149,13 +149,13 @@
   "responsible_party_title": "Responsible Party under GDPR",
   "company_name": "Movia Wintermuth & Partner",
   "ceo_name": "CEO: Mr. Ilias Wintermuth",
-  "company_address": "Albert-Schweitzer-Straße 7\n77654 Offenburg",
+  "company_address": "Albert-Schweitzer-Straße 7<br>77654 Offenburg",
   "impressum_title": "Imprint",
   "impressum_paragraph": "Information according to § 5 TMG:",
   "represented_by_title": "Represented by:",
   "tax_info": "Note: No VAT identification number under § 27a UStG.",
   "responsible_for_content_title": "Responsible for Content under § 55 Abs. 2 RStV:",
-  "responsible_person": "Mr. Ilias Wintermuth\nAlbert-Schweitzer-Straße 7\n77654 Offenburg",
+  "responsible_person": "Mr. Ilias Wintermuth\nAlbert-Schweitzer-Straße 7<br>77654 Offenburg",
   "contact_whatsapp": "Whatsapp: +49 176 25412730"
 }
   

@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.Fragebogen</title>
+    <script src="https://unpkg.com/i18next@21/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@1.4.1/i18nextHttpBackend.min.js"></script>
+    <script src="../js/i18n.js"></script>
+    <link rel="stylesheet" href="../css/resetStyle.css">
+    <link rel="stylesheet" href="../css/var.css">
+    <link rel="stylesheet" href="../css/cookie.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/questionnaire.css">
+</head>
+<body>
+    <noscript>
+        <div style="
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background-color: white;
+          font-family: 'Open Sans', sans-serif;
+          color: #333;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 20px;
+          z-index: 9999;
+        ">
+          <h1 style="font-size: 2em; margin-bottom: 0.5em;">JavaScript ist deaktiviert</h1>
+          <p style="font-size: 1.2em; max-width: 600px;">
+            Um diese Website richtig nutzen zu können, aktivieren Sie bitte JavaScript in den Einstellungen Ihres Browsers.
+          </p>
+        </div>
+    </noscript>
+    <header>
+        <div class="header__logo">
+          <a href="../index.html"><img src="../imgs/logo.png" alt="logo muvia"></a>
+        </div>
+        <input type="checkbox" id="check" />
+        <label for="check" class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <div class="header__menu-wrapper">
+          <div class="header__menu">
+            <ul class="header__menu-list">
+              <li><a href="../index.html" class="header__link" data-i18n="back"></a></li>
+              <li><a href="../pages/About.html" class="header__link" data-i18n="headerLink1"></a></li>
+              <li><a href="../index.html#l" class="header__link scroll-link" data-i18n="headerLink2"></a></li>
+              <li><a href="../index.html#k" class="header__link scroll-link" data-i18n="headerLink3"></a></li>
+              <li class="header__hover">
+                <a href="#" class="header__submenu-link" data-i18n="headerLink4"></a>
+                <ul class="header__submenu">
+                  <li><a href="#de" onclick="changeLanguage('de')">Deutsch</a></li>
+                  <li><a href="#en" onclick="changeLanguage('en')">English</a></li>
+                  <li><a href="#ru" onclick="changeLanguage('ru')">Русский</a></li>
+                  <li><a href="#ua" onclick="changeLanguage('ua')">Українська</a></li>
+                  <li><a href="#hr" onclick="changeLanguage('hr')">Hrvatski</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </header>
+    <main>
+      <div class="form-container">
+        <h2>Wohnungsantrag Formular</h2>
+        <form class="grid">
+          <h2>Zur Person</h2>
+          <div class="gender">
+            <div class="form__radioBTN">
+              <label class="label-radioBTN" for="user_region">Andere<span class=""></span></label>
+              <div class="radio-button-container">
+                <div class="radio-button">
+                  <input type="radio" class="radio-button__input" id="radio1" name="gender" value="Herr" required>
+                  <label class="radio-button__label" for="radio1">
+                    <span class="radio-button__custom"></span>
+                    <p>Herr</p>
+                  </label>
+                </div>
+                <div class="radio-button">
+                  <input type="radio" class="radio-button__input" id="radio2" name="gender" value="Frau" required>
+                  <label class="radio-button__label" for="radio2">
+                    <span class="radio-button__custom"></span>
+                    <p>Frau</p>
+                  </label>
+                </div>
+                <div class="radio-button">
+                  <input type="radio" class="radio-button__input" id="radio3" name="gender" value="Divers" required>
+                  <label class="radio-button__label" for="radio3">
+                    <span class="radio-button__custom"></span>
+                    <p>Divers</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form__input-group">
+            <label>Name: <input class="input" type="text" name="nachname" required></label>
+            <label>Vorname: <input class="input" type="text" name="vorname" required></label>
+          </div>
+          <div class="form__input-group">
+            <label>Straße / Hausnummer: <input class="input" type="text" name="strasse" required></label>
+            <label>PLZ / Ort: <input class="input" type="text" name="plz_ort" required></label>
+          </div>
+          <div class="form__input-group">
+            <label>Geschlecht: <input class="input" type="text" name="geschlecht" required></label>
+            <label>Geburtsdatum: <input class="input" type="date" name="geburtsdatum" required></label>
+            <label>Geburtsland: <input class="input" type="text" name="geburtsland" required></label>
+            <label>Geburtsort: <input class="input" type="text" name="geburtsort" required></label>
+          </div>
+          <div class="form__input-group">
+            <label>Staatsangehörigkeit: <input class="input" type="text" name="staatsangehoerigkeit" required></label>
+            <label>Familienstand: <input class="input" type="text" name="familienstand" required></label>
+          </div>
+          <div class="form__input-group">
+            <label>Insgesamt Personen: <input class="input" type="number" name="gesamtpersonen" required min="0"></label>
+            <label>Davon Erwachsene: <input class="input" type="number" name="erwachsene" required min="0"></label>
+            <label>Davon Kinder: <input class="input" type="number" name="kinder" required min="0"></label>
+          </div>
+          
+          <h2>Aufenthalt</h2>
+          <div class="form__input-group">
+            <label>Seit wann in Deutschland? <input class="input" type="date" name="seit_de" required></label>
+          </div>
+          <div class="rb">
+            <label>Gültiger Aufenthaltstitel?</label>
+            <div class="radio-button-container">
+              <div class="radio-button">
+                <input type="radio" name="answer" class="radio-button__input" id="radio1J" value="Ja" required>
+                <label class="radio-button__label" for="radio1J">
+                  <span class="radio-button__custom"></span>
+                  <p>Ja</p>
+                </label>
+              </div>
+              <div class="radio-button">
+                <input type="radio" name="answer" class="radio-button__input" id="radio2N" value="Nein" required>
+                <label class="radio-button__label" for="radio2N">
+                  <span class="radio-button__custom"></span>
+                  <p>Nein</p>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form__input-group">
+            <label>Aufenthaltsart: <input class="input" type="text" name="aufenthaltsart" required></label>
+            <label class="InpPar">§: <input class="input" type="text" name="paragraph" required></label>
+          </div>
+          
+          <h2>Kontakt</h2>
+          <div class="form__input-group">
+            <label>Telefonnummer: <input class="input" type="tel" name="telefon" required></label>
+            <label>Email: <input class="input" type="email" name="email" required></label>
+          </div>
+          
+          <h2>Wohnungsdetails</h2>
+          <div class="form__input-group">
+            <label>Stadt / Bezirk: <input class="input" type="text" name="stadt_bezirk" required></label>
+            <label>Anzahl der Zimmer: <input class="input" type="number" name="zimmer" max="5" min="0" required></label>
+            <label>Etage: <input class="input" type="number" name="etage" required></label>
+          </div>
+          <div class="form__input-group kaltmiete">
+            <p>Kaltmiete</p>
+            <label> von € <input class="input" type="number" name="miete_von" min="0" required></label>
+            <label>bis € <input class="input" type="number" name="miete_bis" min="0" required></label>
+          </div>
+          <div class="form__input-group">
+            <label>Gewünschter Einzugstermin: <input class="input" type="date" name="einzug" required></label>
+          </div>
+          
+          <h3>Weitere Anforderungen</h3>
+          <div class="form__input-group ch">
+            <label>          
+              <p>Balkon / Terrasse:</p>    
+              <div class="form__input-group-checkbox">
+                <label class="container">
+                  <input type="checkbox" id="form__checkbox1" name="balkon" value="on">
+                  <svg viewBox="0 0 64 64" height="15px" width="15px">
+                    <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" class="path"></path>
+                  </svg>
+                </label>
+              </div>
+            </label>
+            <label>          
+              <p>Haustiere:</p>    
+              <div class="form__input-group-checkbox">
+                <label class="container">
+                  <input type="checkbox" id="form__checkbox2" name="haustiere" value="on">
+                  <svg viewBox="0 0 64 64" height="15px" width="15px">
+                    <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" class="path"></path>
+                  </svg>
+                </label>
+              </div>
+            </label>
+            <label>          
+              <p>Barrierefrei:</p>    
+              <div class="form__input-group-checkbox">
+                <label class="container">
+                  <input type="checkbox" id="form__checkbox3" name="barrierefrei" value="on">
+                  <svg viewBox="0 0 64 64" height="15px" width="15px">
+                    <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" class="path"></path>
+                  </svg>
+                </label>
+              </div>
+            </label>
+            <label>          
+              <p>Parkplatz / Garage:</p>    
+              <div class="form__input-group-checkbox">
+                <label class="container">
+                  <input type="checkbox" id="form__checkbox4" name="garage" value="on">
+                  <svg viewBox="0 0 64 64" height="15px" width="15px">
+                    <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" class="path"></path>
+                  </svg>
+                </label>
+              </div>
+            </label>
+            <label>          
+              <p>Raucher:</p>    
+              <div class="form__input-group-checkbox">
+                <label class="container">
+                  <input type="checkbox" id="form__checkbox5" name="raucher" value="on">
+                  <svg viewBox="0 0 64 64" height="15px" width="15px">
+                    <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" class="path"></path>
+                  </svg>
+                </label>
+              </div>
+            </label>
+            <label>          
+              <p>Instrument:</p>    
+              <div class="form__input-group-checkbox">
+                <label class="container">
+                  <input type="checkbox" id="form__checkbox6" name="instrument" value="on">
+                  <svg viewBox="0 0 64 64" height="15px" width="15px">
+                    <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" class="path"></path>
+                  </svg>
+                </label>
+              </div>
+            </label>
+            <label>          
+              <p>EBK / Küche:</p>    
+              <div class="form__input-group-checkbox">
+                <label class="container">
+                  <input type="checkbox" id="form__checkbox7" name="ebk" value="on">
+                  <svg viewBox="0 0 64 64" height="15px" width="15px">
+                    <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" class="path"></path>
+                  </svg>
+                </label>
+              </div>
+            </label>
+            <label>          
+              <p>Aufzug:</p>    
+              <div class="form__input-group-checkbox">
+                <label class="container">
+                  <input type="checkbox" id="form__checkbox8" name="aufzug" value="on">
+                  <svg viewBox="0 0 64 64" height="15px" width="15px">
+                    <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" class="path"></path>
+                  </svg>
+                </label>
+              </div>
+            </label>
+          </div>
+          
+          
+          <h2>Aktuelle Situation</h2>
+          <div class="form__input-group">
+            <label>
+              Aktueller Vermieter (Firma):
+              <input class="input" type="text" name="vermieter_firma" required>
+            </label>
+          
+            <div class="rb">
+              <label>Hatten Sie Schwierigkeiten mit ihrem Vermieter?</label>
+              <div class="radio-button-container">
+                <div class="radio-button">
+                  <input type="radio" name="vermieter_schwierigkeiten" class="radio-button__input" id="vermieterJa" value="Ja" required>
+                  <label class="radio-button__label" for="vermieterJa">
+                    <span class="radio-button__custom"></span>
+                    <p>Ja</p>
+                  </label>
+                </div>
+                <div class="radio-button">
+                  <input type="radio" name="vermieter_schwierigkeiten" class="radio-button__input" id="vermieterNein" value="Nein">
+                  <label class="radio-button__label" for="vermieterNein">
+                    <span class="radio-button__custom"></span>
+                    <p>Nein</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+          
+            <div class="rb">
+              <label>Haben Sie einen Wohnberechtigungsschein?</label>
+              <div class="radio-button-container">
+                <div class="radio-button">
+                  <input type="radio" name="berechtigung" class="radio-button__input" id="berechtigungJa" value="Ja" required>
+                  <label class="radio-button__label" for="berechtigungJa">
+                    <span class="radio-button__custom"></span>
+                    <p>Ja</p>
+                  </label>
+                </div>
+                <div class="radio-button">
+                  <input type="radio" name="berechtigung" class="radio-button__input" id="berechtigungNein" value="Nein">
+                  <label class="radio-button__label" for="berechtigungNein">
+                    <span class="radio-button__custom"></span>
+                    <p>Nein</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+          
+            <label>
+              Grund für den Umzug:
+              <input class="input" type="text" name="umzug_grund" required>
+            </label>
+          </div>
+          
+          <h2>Finanzielle Situation</h2>
+          
+          <div class="rb">
+            <label>Haben Sie Kredite in den letzen 2 Jahren aufgenommen:</label>
+            <div class="radio-button-container">
+              <div class="radio-button">
+                <input type="radio" name="kredite" class="radio-button__input" id="krediteJa" value="Ja" required>
+                <label class="radio-button__label" for="krediteJa">
+                  <span class="radio-button__custom"></span>
+                  <p>Ja</p>
+                </label>
+              </div>
+              <div class="radio-button">
+                <input type="radio" name="kredite" class="radio-button__input" id="krediteNein" value="Nein">
+                <label class="radio-button__label" for="krediteNein">
+                  <span class="radio-button__custom"></span>
+                  <p>Nein</p>
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="rb">
+            <label>Haben Sie Schwierigkeiten mit der Schufa?</label>
+            <div class="radio-button-container">
+              <div class="radio-button">
+                <input type="radio" name="schufa" class="radio-button__input" id="schufaJa" value="Ja" required>
+                <label class="radio-button__label" for="schufaJa">
+                  <span class="radio-button__custom"></span>
+                  <p>Ja</p>
+                </label>
+              </div>
+              <div class="radio-button">
+                <input type="radio" name="schufa" class="radio-button__input" id="schufaNein" value="Nein">
+                <label class="radio-button__label" for="schufaNein">
+                  <span class="radio-button__custom"></span>
+                  <p>Nein</p>
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="rb">
+            <label>Haben Sie Schwierigkeiten mit Inkasso?</label>
+            <div class="radio-button-container">
+              <div class="radio-button">
+                <input type="radio" name="inkasso" class="radio-button__input" id="inkassoJa" value="Ja" required>
+                <label class="radio-button__label" for="inkassoJa">
+                  <span class="radio-button__custom"></span>
+                  <p>Ja</p>
+                </label>
+              </div>
+              <div class="radio-button">
+                <input type="radio" name="inkasso" class="radio-button__input" id="inkassoNein" value="Nein">
+                <label class="radio-button__label" for="inkassoNein">
+                  <span class="radio-button__custom"></span>
+                  <p>Nein</p>
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="rb">
+            <label>Haben Sie Schwierigkeiten mit Ihrer Bank?</label>
+            <div class="radio-button-container">
+              <div class="radio-button">
+                <input type="radio" name="bank" class="radio-button__input" id="bankJa" value="Ja" required>
+                <label class="radio-button__label" for="bankJa">
+                  <span class="radio-button__custom"></span>
+                  <p>Ja</p>
+                </label>
+              </div>
+              <div class="radio-button">
+                <input type="radio" name="bank" class="radio-button__input" id="bankNein" value="Nein">
+                <label class="radio-button__label" for="bankNein">
+                  <span class="radio-button__custom"></span>
+                  <p>Nein</p>
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="rb">
+            <label>Haben Sie Schwierigkeiten mit dem Jobcenter?</label>
+            <div class="radio-button-container">
+              <div class="radio-button">
+                <input type="radio" name="jobcenter" class="radio-button__input" id="jobcenterJa" value="Ja" required>
+                <label class="radio-button__label" for="jobcenterJa">
+                  <span class="radio-button__custom"></span>
+                  <p>Ja</p>
+                </label>
+              </div>
+              <div class="radio-button">
+                <input type="radio" name="jobcenter" class="radio-button__input" id="jobcenterNein" value="Nein">
+                <label class="radio-button__label" for="jobcenterNein">
+                  <span class="radio-button__custom"></span>
+                  <p>Nein</p>
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="rb">
+            <label>Haben Sie Schwierigkeiten mit andern Ämtern?</label>
+            <div class="radio-button-container">
+              <div class="radio-button">
+                <input type="radio" name="aemter" class="radio-button__input" id="aemterJa" value="Ja" required>
+                <label class="radio-button__label" for="aemterJa">
+                  <span class="radio-button__custom"></span>
+                  <p>Ja</p>
+                </label>
+              </div>
+              <div class="radio-button">
+                <input type="radio" name="aemter" class="radio-button__input" id="aemterNein" value="Nein">
+                <label class="radio-button__label" for="aemterNein">
+                  <span class="radio-button__custom"></span>
+                  <p>Nein</p>
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          
+          <h2>Einkünfte</h2>
+          <h3>Beruf:</h3>
+          <div class="rb"> 
+            <label>Sind Sie in einem Beruf tätig? (Arbeit, Minijob, Aushilfe…)</label>
+            <div class="radio-button-container">
+              <div class="radio-button">
+                <input type="radio" name="berufTaetig" class="radio-button__input" id="berufTaetigJa" value="Ja" required>
+                <label class="radio-button__label" for="berufTaetigJa">
+                  <span class="radio-button__custom"></span>
+                  <p>Ja</p>
+                </label>
+              </div>
+              <div class="radio-button">
+                <input type="radio" name="berufTaetig" class="radio-button__input" id="berufTaetigNein" value="Nein" required>
+                <label class="radio-button__label" for="berufTaetigNein">
+                  <span class="radio-button__custom"></span>
+                  <p>Nein</p>
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <label>Beruf:<input class="input" type="text" name="beruf" required></label>
+            <label>Firma:<input class="input" type="text" name="firma" required></label>
+            <label>Arbeitgeber:<input class="input" type="text" name="arbeitgeber" required></label>
+            <label>Seit wann?:<input class="input" type="text" name="seitWann" required></label>
+            <label>Wenn Nein, was war Ihr letzter Beruf?:<input class="input" type="text" name="letzterBeruf" required></label>
+          
+            <div class="rb">
+              <label>War dieser Beruf in Deutschland ausgeübt?</label>
+              <div class="radio-button-container">
+                <div class="radio-button">
+                  <input type="radio" name="berufInDeutschland" class="radio-button__input" id="berufInDeutschlandJa" value="Ja" required>
+                  <label class="radio-button__label" for="berufInDeutschlandJa">
+                    <span class="radio-button__custom"></span>
+                    <p>Ja</p>
+                  </label>
+                </div>
+                <div class="radio-button">
+                  <input type="radio" name="berufInDeutschland" class="radio-button__input" id="berufInDeutschlandNein" value="Nein" required>
+                  <label class="radio-button__label" for="berufInDeutschlandNein">
+                    <span class="radio-button__custom"></span>
+                    <p>Nein</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            
+            <label>Wenn Nein, wo?: <input class="input" type="text" name="woLetzterBeruf" required></label>
+            
+            <div class="rb">
+              <label>Wird dieser Beruf in Deutschland anerkannt?</label>
+              <div class="radio-button-container">
+                <div class="radio-button">
+                  <input type="radio" name="anerkanntBeruf" class="radio-button__input" id="anerkanntBerufJa" value="Ja" required>
+                  <label class="radio-button__label" for="anerkanntBerufJa">
+                    <span class="radio-button__custom"></span>
+                    <p>Ja</p>
+                  </label>
+                </div>
+                <div class="radio-button">
+                  <input type="radio" name="anerkanntBeruf" class="radio-button__input" id="anerkanntBerufNein" value="Nein" required>
+                  <label class="radio-button__label" for="anerkanntBerufNein">
+                    <span class="radio-button__custom"></span>
+                    <p>Nein</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <h3>Sonstige Einkommen</h3>
+          <div>
+            <div class="rb">
+              <label>Erhalten Sie Sozialleistungen? Bescheid vorlegen!</label>
+              <div class="radio-button-container">
+                <div class="radio-button">
+                  <input type="radio" name="sozialleistungen" class="radio-button__input" id="sozialleistungenJa" value="Ja" required>
+                  <label class="radio-button__label" for="sozialleistungenJa">
+                    <span class="radio-button__custom"></span>
+                    <p>Ja</p>
+                  </label>
+                </div>
+                <div class="radio-button">
+                  <input type="radio" name="sozialleistungen" class="radio-button__input" id="sozialleistungenNein" value="Nein" required>
+                  <label class="radio-button__label" for="sozialleistungenNein">
+                    <span class="radio-button__custom"></span>
+                    <p>Nein</p>
+                  </label>
+                </div>
+              </div>
+            </div>            
+            <label><input type="checkbox" name="sozialleistungen"> Sozialleistungen</label>
+            <label>ALG 1/2: <input class="input" type="number" name="alg" required></label>
+            <label>Krankengeld: <input class="input" type="number" name="krankengeld" required></label>
+            <label>Rente/Erwerbsminderung: <input class="input" type="number" name="rente" required></label>
+            <label>Unterhaltsvorschuss: <input class="input" type="number" name="unterhalt" required></label>
+            <label>Wohngeld: <input class="input" type="number" name="wohngeld" required></label>
+            <label>Sonstige: <input class="input" type="number" name="sonstige" required></label>
+          </div>
+          
+
+
+          <h3>Nettoeinkommen</h3>
+          <div>
+            <label>Monatliches Gesamteinkommen der Familie (Netto): 
+              <input class="input" type="number" name="gesamteinkommen" required>
+            </label>
+          </div>
+          
+          <h2>Sonstiges</h2>
+          <div>
+            <div class="rb">
+              <label>Erhalten Sie Sozialleistungen? Bescheid vorlegen!</label>
+              <div class="radio-button-container">
+                <div class="radio-button">
+                  <input type="radio" name="anerkannt" class="radio-button__input" id="anerkanntJa" value="Ja" required>
+                  <label class="radio-button__label" for="anerkanntJa">
+                    <span class="radio-button__custom"></span>
+                    <p>Ja</p>
+                  </label>
+                </div>
+                <div class="radio-button">
+                  <input type="radio" name="anerkannt" class="radio-button__input" id="anerkanntNein" value="Nein">
+                  <label class="radio-button__label" for="anerkanntNein">
+                    <span class="radio-button__custom"></span>
+                    <p>Nein</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            
+            <label>Bei welchen Unternehmen? 
+              <input class="input" type="text" name="unternehmen" required>
+            </label>
+            <label>Seit Wann? 
+              <input class="input" type="text" name="seitWann2" required>
+            </label>
+          </div>
+          
+          <h2>Zu den Weiteren Personen:</h2>
+          <p>Bitte geben Sie hier die Namentlichen Angaben über weitere Personen des Haushaltes ein.<br>( z. B. Partner, Kinder, oder weitere Personen. )</p>
+          <div>
+            <table id="personTable" class="person-table">
+              <thead>
+                <tr>
+                  <th class="column-header">Name</th>
+                  <th class="column-header">Vorname</th>
+                  <th class="column-header">Geb. am</th>
+                  <th class="column-header">Tätigkeit</th>
+                  <th class="column-header">Aktion</th>
+                </tr>
+              </thead>
+              <tbody class="person-body">
+                <!-- Здесь предполагается динамическое добавление -->
+              </tbody>
+            </table>
+            
+            <button id="addBtn" class="add-button" type="button" onclick="addPerson()">➕ Neue Person hinzufügen</button>
+          </div>
+          
+          <h2>Zu Sozialeinkommen:</h2>
+          <p>Bitte geben Sie hier die entsprechenden Ansprechpartner*innen oder Sozialarbeiter an:</p>
+          <div>
+            <table class="person-table">
+              <thead>
+                <tr>
+                  <th class="column-header">Amt:</th>
+                  <th class="column-header">z. B. Jobcenter…</th>
+                </tr>
+              </thead>
+              <tbody class="person-body">
+                <tr>
+                  <td>Persönlicher Ansprechpartner*in</td>
+                  <td><input type="text" name="field1" required></td>
+                </tr>
+                <tr>
+                  <td>Sozialarbeiter ( Finanzen ) </td>
+                  <td><input type="text" name="field2" required></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div>
+            <label class="lb">            
+              <div class="form__input-group-checkbox">
+                <label class="container">
+                  <input type="checkbox" id="form__checkbox1" required>
+                  <svg viewBox="0 0 64 64" height="15px" width="15px">
+                    <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" class="path"></path>
+                  </svg>
+                </label>
+              </div>
+              <p>Mit Abschluss des Mietvertrages verpflichtet sich der Kunde, die Dienstleistungen der Firma Movia in
+                Anspruch zu nehmen. Dies beinhaltet die verbindliche Mitgliedschaft als Kunde sowie die Verpflichtung
+                zur Zeichnung und fristgerechten Einzahlung der im Einzelfall schriftlich vereinbarten Geschäftsanteile
+                oder Gebühren. Die konkreten Modalitäten werden zwischen dem Kunden und der Firma Movia in einem
+                separaten Schriftstück verbindlich geregelt.</p>
+            </label>
+          
+            <label class="lb">          
+              <div class="form__input-group-checkbox">
+                <label class="container">
+                  <input type="checkbox" id="form__checkbox2" required>
+                  <svg viewBox="0 0 64 64" height="15px" width="15px">
+                    <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" class="path"></path>
+                  </svg>
+                </label>
+              </div>
+              <p>Ich/wir ermächtige/n hiermit die Firma Movia, Auskünfte über meine/unsere Bonität bei entsprechend
+                autorisierten Auskunfteien einzuholen.
+                Ich/wir stimme/n zu, dass meine/unsere personenbezogenen Daten im Falle eines Zustandekommens
+                eines Vertragsverhältnisses für einen Zeitraum von bis zu zwei Jahren gespeichert werden – auch über
+                die Dauer des Vertragsverhältnisses hinaus.
+                Sollte kein Interesse an einer weiteren Wohnungsvermittlung bestehen, bitten wir um schriftliche
+                Mitteilung. In diesem Fall werden sämtliche personenbezogenen Daten gemäß den gesetzlichen
+                Datenschutzbestimmungen umgehend gelöscht.</p>
+            </label>
+          
+            <label class="lb">           
+              <div class="form__input-group-checkbox">
+                <label class="container">
+                  <input type="checkbox" id="form__checkbox3" required>
+                  <svg viewBox="0 0 64 64" height="15px" width="15px">
+                    <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" class="path"></path>
+                  </svg>
+                </label>
+              </div>
+              <p>Ich/wir erkläre/n mich/uns ausdrücklich damit einverstanden, dass meine/unsere personenbezogenen
+                Daten im Rahmen der Wohnungsvermittlung sowie der damit verbundenen Kommunikation an Dritte –
+                insbesondere potenzielle Vermieter, Wohnungsverwaltungen oder Kooperationspartner – weitergeleitet
+                werden dürfen.
+                Die Datenweitergabe erfolgt ausschließlich zweckgebunden im Zusammenhang mit der Wohnraumsuche
+                und unter Beachtung der geltenden datenschutzrechtlichen Bestimmungen</p>
+            </label>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-block">
+              <label>
+                <input style="width: 100px; height: 22px; " class="input" type="text" name="datum" required>
+              </label>
+              <p style="width: 100px;" class="form-paragraph">Ort / Datum :</p>
+            </div>
+            <div class="form-block">
+              <div class="form__input-group-checkbox">
+                <label class="container">
+                  <input type="checkbox" id="form__checkbox4" name="signature" value="on" required>
+                  <svg viewBox="0 0 64 64" height="12px" width="12px">
+                    <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" class="path"></path>
+                  </svg>
+                  <p style="display: inline;">Ich stimme zu</p>
+                </label>
+              </div>
+              <p class="form-paragraph">Unterschrift des Antragstellers</p>
+            </div>
+          </div>                    
+          <button type="submit">Absenden</button>
+        </form>
+      </div>
+    </main>
+    <footer>
+        <div class="footer__container-left">
+          <a href="../index.html"><img class="footer__logo" src="../imgs/logo_inv.png" alt=""></a>
+          <a class="link-custom" href="../pages/Datenschutzerklärung.html" data-i18n="datenschutzerklaerung">Datenschutzerklärung</a>
+          <a class="link-custom" href="../pages/Datenschutzerklärung.html#impressum" data-i18n="impressum">Impressum</a>
+      </div>
+      <div class="footer__container-right">
+        <p><a href="tel:+49 781 47448703" data-i18n="footerPhone">Telefon: +49 781 47448703</a></p>
+        <p><a href="https://maps.app.goo.gl/dbjb4HDFcZU6Ecbi7" data-i18n="footerAdress">Adresse: Albert-Schweitzer-Straße 7<br>77654 Offenburg</a></p>
+        <p><a href="mailto:movia.kundenservice@web.de" data-i18n="footerEmail">E-Mail: movia.kundenservice@web.de</a></p>
+        <a class="link-custom" target="_blank" href="https://maps.app.goo.gl/dbjb4HDFcZU6Ecbi7" data-i18n="footerMap">Karte anzeigen</a>
+        </div>
+    </footer>
+    <script src="../js/formSumbit.js"></script>
+    <script src="../js/table.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/fade-in.js"></script>
+    <script src="../js/scroll.js"></script>
+</body>
+</html>

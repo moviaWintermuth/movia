@@ -15,19 +15,19 @@ document.querySelector("form").addEventListener("submit", async function (e) {
   }
 
   try {
-    const response = await fetch("http://localhost:3000/api/submit", {
+    const response = await fetch("https://server-q9yh.onrender.com/api/submit", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
 
-    if (response.ok) {
-      alert("Форма успешно отправлена!");
-    } else {
-      alert("Ошибка при отправке формы.");
-    }
-  } catch (error) {
-    console.error("Ошибка запроса:", error);
-    alert("Произошла ошибка сети.");
-  }
+if (response.ok) {
+  alert("Das Formular wurde erfolgreich gesendet!");
+} else {
+  alert("Fehler beim Senden des Formulars.");
+}
+} catch (error) {
+  console.error("Fehler bei der Anfrage:", error);
+  alert("Ein Netzwerkfehler ist aufgetreten.");
+}
 });

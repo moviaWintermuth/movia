@@ -80,8 +80,8 @@ button[type="reset"] {
 form > div {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin: 10px 0 10px 0;
+  gap: 18px;
+  margin: 18px 0;
 }
 .gender {
   display: flex;
@@ -98,6 +98,12 @@ form > div {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+.user__gender {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 .radio-button-container {
   display: flex;
@@ -357,6 +363,50 @@ form > div {
   border-top: 1px solid black;
 }
 
+.custom-alert {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #252525;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-family: sans-serif;
+  z-index: 9999;
+  min-width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease;
+}
+
+.custom-alert .progress-line {
+  height: 4px;
+  background: #888;
+  animation: progressLine 3s linear forwards;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+@keyframes progressLine {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+.beruf-block.disabled > .beruf-input:hover {
+  border: none;
+} 
+.hidden {
+  display: none;
+}
+.beruf-input:disabled {
+  /* background-color: #e0e6ed; */
+  border: none;
+  cursor: not-allowed;
+}
+.required::after {
+  content: ' *';
+  color: red;
+  
+}
 @media (max-width: 600px) {
   main {
     padding: 10vw 1rem 1.5rem 1rem;

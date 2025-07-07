@@ -155,5 +155,9 @@
   "tax_info": "Napomena: Ne postoji identifikacijski broj PDV-a u skladu s § 27a UStG.",
   "responsible_for_content_title": "Odgovoran za sadržaj prema § 55 st. 2 RStV:",
   "responsible_person": "G. Ilias Wintermuth<br>Albert-Schweitzer-Straße 7<br>77654 Offenburg",
-  "contact_whatsapp": "Whatsapp: +49 176 25412730"
+  "contact_whatsapp": "Whatsapp: +49 176 25412730", 
+
+ "no_cyrillic": "Molimo pišite samo na njemačkom jeziku (bez ćiriličnih znakova).",
+  "fill_all_fields": "Molimo ispunite sva obavezna polja."
+
 }

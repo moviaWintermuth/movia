@@ -157,6 +157,10 @@
   "tax_info": "Hinweis: Es liegt keine Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG vor.",
   "responsible_for_content_title": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:",
   "responsible_person": "Herr Ilias Wintermuth<br>Albert-Schweitzer-Straße 7<br>77654 Offenburg",
-  "contact_whatsapp": "Whatsapp: +49 176 25412730"      
+  "contact_whatsapp": "Whatsapp: +49 176 25412730",
+
+  "no_cyrillic": "Bitte schreibe nur auf Deutsch (keine kyrillischen Buchstaben).",
+  "fill_all_fields": "Bitte fülle alle erforderlichen Felder aus."
+      
 }
 

@@ -179,5 +179,8 @@
   "responsible_for_content_title": "Відповідальний за зміст згідно з § 55 абз. 2 RStV:",
   "responsible_person": "Пан Іліас Вінтермут<br>Albert-Schweitzer-Straße 7<br>77654 Offenburg",
   
-  "contact_whatsapp": "Whatsapp: +49 176 25412730"
+  "contact_whatsapp": "Whatsapp: +49 176 25412730", 
+  "no_cyrillic": "Будь ласка, пишіть лише німецькою мовою (без кирилиці).",
+  "fill_all_fields": "Будь ласка, заповніть усі обов’язкові поля."
+
 }

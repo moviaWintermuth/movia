@@ -157,6 +157,9 @@
   "tax_info": "Note: No VAT identification number under § 27a UStG.",
   "responsible_for_content_title": "Responsible for Content under § 55 Abs. 2 RStV:",
   "responsible_person": "Mr. Ilias Wintermuth<br>Albert-Schweitzer-Straße 7<br>77654 Offenburg",
-  "contact_whatsapp": "Whatsapp: +49 176 25412730"
+  "contact_whatsapp": "Whatsapp: +49 176 25412730",
+
+  "no_cyrillic": "Please write only in German (no Cyrillic characters).",
+  "fill_all_fields": "Please fill in all required fields."
 }
   

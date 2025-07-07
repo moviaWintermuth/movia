@@ -157,5 +157,9 @@
     "tax_info": "Примечание: Налоговый номер не предусмотрен в соответствии с § 27a UStG.",
     "responsible_for_content_title": "Ответственный за контент по § 55 Abs. 2 RStV:",
     "responsible_person": "Г-н Илияс Винтермут<br>Albert-Schweitzer-Straße 7<br>77654 Offenburg",
-    "contact_whatsapp": "Whatsapp: +49 176 25412730"
+    "contact_whatsapp": "Whatsapp: +49 176 25412730", 
+
+    "no_cyrillic": "Пожалуйста, пишите только на немецком языке (без кириллицы).",
+    "fill_all_fields": "Пожалуйста, заполните все обязательные поля."
+
 }

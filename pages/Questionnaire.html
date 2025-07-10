@@ -72,131 +72,131 @@
     </header>
     <main>
       <div class="form-container">
-        <h2>Wohnungsantrag Formular</h2>
+        <h2 data-i18n="wohnungsantrag_formular">Wohnungsantrag Formular</h2>
         <form class="grid" novalidate >
-          <h2>Zur Person</h2>
+          <h2 data-i18n="zur_person">Zur Person</h2>
           <div class="gender">
             <div class="form__radioBTN user__gender">
-              <label class="label-radioBTN" for="user_gender">Andere <span class="required"></span></label>
+              <label class="label-radioBTN" for="user_gender"><span data-i18n="gender">Andere</span><span class="required"></span></label>
               <div class="radio-button-container">
                 <div class="radio-button">
                   <input type="radio" class="radio-button__input" id="radio1" name="gender" value="Herr" required>
                   <label class="radio-button__label" for="radio1">
                     <span class="radio-button__custom"></span>
-                    <p>Herr</p>
+                    <p data-i18n="herr">Herr</p>
                   </label>
                 </div>
                 <div class="radio-button">
                   <input type="radio" class="radio-button__input" id="radio2" name="gender" value="Frau" required>
                   <label class="radio-button__label" for="radio2">
                     <span class="radio-button__custom"></span>
-                    <p>Frau</p>
+                    <p data-i18n="frau">Frau</p>
                   </label>
                 </div>
                 <div class="radio-button">
                   <input type="radio" class="radio-button__input" id="radio3" name="gender" value="Divers" required>
                   <label class="radio-button__label" for="radio3">
                     <span class="radio-button__custom"></span>
-                    <p>Divers</p>
+                    <p data-i18n="divers">Divers</p>
                   </label>
                 </div>
               </div>
             </div>
           </div>
           <div class="form__input-group">
-            <label>Name: <span class="required"></span><input class="input" type="text" name="nachname" required></label>
+            <label><span data-i18n="name_q">Name</span> <span class="required"></span><input class="input" type="text" name="nachname" required></label>
           </div>
           <div class="form__input-group">
-            <label>Vorname: <span class="required"></span><input class="input" type="text" name="vorname" required></label>
+            <label> <span data-i18n="first_name_q">Vorname:</span><span class="required"></span><input class="input" type="text" name="vorname" required></label>
           </div>
           <div class="form__input-group">
-            <label>Straße / Hausnummer: <span class="required"></span><input class="input" type="text" name="strasse" required></label>
+            <label><span data-i18n="street_q">Straße / Hausnummer:</span><span class="required"></span><input class="input" type="text" name="strasse" required></label>
           </div>
           <div class="form__input-group">
-            <label>PLZ / Ort: <span class="required"></span><input class="input" type="text" name="plz_ort" required></label>
+            <label><span data-i18n="plz_ort_q">PLZ / Ort:</span> <span class="required"></span><input class="input" type="text" name="plz_ort" required></label>
           </div>
           <div class="form__input-group">
-            <label>Geschlecht: <span class="required"></span><input class="input" type="text" name="geschlecht" required></label>
+            <label><span data-i18n="geschlecht_q">Geschlecht:</span><span class="required"></span><input class="input" type="text" name="geschlecht" required></label>
           </div>
           <div class="form__input-group">
-            <label>Geburtsdatum: <span class="required"></span><input class="input" type="date" name="geburtsdatum" required></label>
+            <label><span data-i18n="geburtsdatum_q">Geburtsdatum:</span><span class="required"></span><input class="input" type="date" name="geburtsdatum" required></label>
           </div>
           <div class="form__input-group">
-            <label>Geburtsland: <span class="required"></span><input class="input" type="text" name="geburtsland" required></label>
+            <label><span data-i18n="geburtsland_q">Geburtsland:</span><span class="required"></span><input class="input" type="text" name="geburtsland" required></label>
           </div>
           <div class="form__input-group">
-            <label>Geburtsort: <span class="required"></span><input class="input" type="text" name="geburtsort" required></label>
+            <label><span data-i18n="geburtsort_q">Geburtsort:</span><span class="required"></span><input class="input" type="text" name="geburtsort" required></label>
           </div>
           <div class="form__input-group">
-            <label>Staatsangehörigkeit: <span class="required"></span><input class="input" type="text" name="staatsangehoerigkeit" required></label>
+            <label><span data-i18n="staatsangehoerigkeit_q">Staatsangehörigkeit:</span><span class="required"></span><input class="input" type="text" name="staatsangehoerigkeit" required></label>
           </div>
           <div class="form__input-group">
-            <label>Familienstand: <span class="required"></span><input class="input" type="text" name="familienstand" required></label>
+            <label><span data-i18n="familienstand_q">Familienstand:"</span> <span class="required"></span><input class="input" type="text" name="familienstand" required></label>
           </div>
           <div class="form__input-group">
-            <label>Insgesamt Personen: <span class="required"></span><input class="input" type="number" name="gesamtpersonen" required min="0"></label>
+            <label><span data-i18n="gesamtpersonen_q">Insgesamt Personen:</span><span class="required"></span><input class="input" type="number" name="gesamtpersonen" required min="0"></label>
           </div>
           <div class="form__input-group">
-            <label>Davon Erwachsene: <span class="required"></span><input class="input" type="number" name="erwachsene" required min="0"></label>
+            <label><span data-i18n="erwachsene_q">Davon Erwachsene:</span><span class="required"></span><input class="input" type="number" name="erwachsene" required min="0"></label>
           </div>
           <div class="form__input-group">
-            <label>Davon Kinder: <span class="required"></span><input class="input" type="number" name="kinder" required min="0"></label>
+            <label><span data-i18n="kinder_q">Davon Kinder:</span></span> <span class="required"></span><input class="input" type="number" name="kinder" required min="0"></label>
           </div>
           
-          <h2>Aufenthalt</h2>
+          <h2 data-i18n="aufenthalt">Aufenthalt</h2>
           <div class="form__input-group">
-            <label>Seit wann in Deutschland? <input class="input" type="date" name="seit_de" ></label>
+            <label><span data-i18n="seit_de">Seit wann in Deutschland?</span><input class="input" type="date" name="seit_de" ></label>
           </div>
           <div class="rb">
-            <label>Gültiger Aufenthaltstitel?</label>
+            <label><span data-i18n="aufenthaltsart_q">Aufenthaltsart:</span></label>
             <div class="radio-button-container">
               <div class="radio-button">
                 <input type="radio" name="answer" class="radio-button__input" id="radio1J" value="Ja" >
                 <label class="radio-button__label" for="radio1J">
                   <span class="radio-button__custom"></span>
-                  <p>Ja</p>
+                  <p data-i18n="ja">Ja</p>
                 </label>
               </div>
               <div class="radio-button">
                 <input type="radio" name="answer" class="radio-button__input" id="radio2N" value="Nein" >
                 <label class="radio-button__label" for="radio2N">
                   <span class="radio-button__custom"></span>
-                  <p>Nein</p>
+                  <p data-i18n="nein">Nein</p>
                 </label>
               </div>
             </div>
           </div>
           <div class="form__input-group">
-            <label>Aufenthaltsart: <input class="input" type="text" name="aufenthaltsart" ></label>
+            <label><span data-i18n="aufenthaltsort_q1">Aufenthaltsart:</span> <input class="input" type="text" name="aufenthaltsart" ></label>
             <label class="InpPar">§: <input class="input" type="text" name="paragraph" ></label>
           </div>
           
-          <h2>Kontakt</h2>
+          <h2 data-i18n="kontakt">Kontakt</h2>
           <div class="form__input-group">
-            <label>Telefonnummer: <span class="required"></span><input class="input" type="tel" name="telefon" required ></label>
+            <label><span data-i18n="telefon_q">Telefonnummer::"></span><span class="required"></span><input class="input" type="tel" name="telefon" required ></label>
             <!-- Написать валидацию для Email -->
-            <label>Email: <span class="required"></span><input class="input" type="email" name="email" required ></label>
+            <label><span data-i18n="email_q">Email:</span> <span class="required"></span><input class="input" type="email" name="email" required ></label>
           </div>
           
-          <h2>Wohnungsdetails</h2>
+          <h2 data-i18n="wohnungsdetails">Wohnungsdetails</h2>
           <div class="form__input-group">
-            <label>Stadt / Bezirk: <input class="input" type="text" name="stadt_bezirk" ></label>
-            <label>Anzahl der Zimmer: <input class="input" type="number" name="zimmer" max="5" min="0" ></label>
-            <label>Etage: <input class="input" type="number" name="etage" ></label>
+            <label><span data-i18n="stadt_bezirk_q">Stadt / Bezirk:</span><span class="required"></span><input class="input" type="text" name="stadt_bezirk" ></label>
+            <label><span data-i18n="zimmer_q">Anzahl der Zimmer: </span></span><input class="input" type="number" name="zimmer" max="5" min="0" ></label>
+            <label><span data-i18n="etage_q">Etage: </span></span><input class="input" type="number" name="etage" ></label>
           </div>
           <div class="form__input-group kaltmiete">
-            <p>Kaltmiete</p>
-            <label> von € <input class="input" type="number" name="miete_von" min="0" ></label>
-            <label>bis € <input class="input" type="number" name="miete_bis" min="0" ></label>
+            <p data-i18n="kaltmiete">Kaltmiete</p>
+            <label><span data-i18n="von_q">von €</span></span> <input class="input" type="number" name="miete_von" min="0" ></label>
+            <label><span data-i18n="bis_q">bis €</span></span> <input class="input" type="number" name="miete_bis" min="0" ></label>
           </div>
           <div class="form__input-group">
-            <label>Gewünschter Einzugstermin: <input class="input" type="date" name="einzug" ></label>
+            <label><span data-i18n="einzug_q">Gewünschter Einzugstermin: </span></span><input class="input" type="date" name="einzug" ></label>
           </div>
           
-          <h3>Weitere Anforderungen</h3>
+          <h3 data-i18n="weitere_anforderungen">Weitere Anforderungen</h3>
           <div class="form__input-group ch">
             <label>          
-              <p>Balkon / Terrasse:</p>    
+              <p data-i18n="balkon">Balkon / Terrasse:</p>    
               <div class="form__input-group-checkbox">
                 <label class="container">
                   <input type="checkbox" id="form__checkbox1" name="balkon" value="on">
@@ -207,7 +207,7 @@
               </div>
             </label>
             <label>          
-              <p>Haustiere:</p>    
+              <p data-i18n="haustiere">Haustiere:</p>    
               <div class="form__input-group-checkbox">
                 <label class="container">
                   <input type="checkbox" id="form__checkbox2" name="haustiere" value="on">
@@ -218,7 +218,7 @@
               </div>
             </label>
             <label>          
-              <p>Barrierefrei:</p>    
+              <p data-i18n="barrierefrei">Barrierefrei:</p>    
               <div class="form__input-group-checkbox">
                 <label class="container">
                   <input type="checkbox" id="form__checkbox3" name="barrierefrei" value="on">
@@ -229,7 +229,7 @@
               </div>
             </label>
             <label>          
-              <p>Parkplatz / Garage:</p>    
+              <p data-i18n="garage">Parkplatz / Garage:</p>    
               <div class="form__input-group-checkbox">
                 <label class="container">
                   <input type="checkbox" id="form__checkbox4" name="garage" value="on">
@@ -240,7 +240,7 @@
               </div>
             </label>
             <label>          
-              <p>Raucher:</p>    
+              <p data-i18n="raucher">Raucher:</p>    
               <div class="form__input-group-checkbox">
                 <label class="container">
                   <input type="checkbox" id="form__checkbox5" name="raucher" value="on">
@@ -251,7 +251,7 @@
               </div>
             </label>
             <label>          
-              <p>Instrument:</p>    
+              <p data-i18n="instrument">Instrument:</p>    
               <div class="form__input-group-checkbox">
                 <label class="container">
                   <input type="checkbox" id="form__checkbox6" name="instrument" value="on">
@@ -262,7 +262,7 @@
               </div>
             </label>
             <label>          
-              <p>EBK / Küche:</p>    
+              <p data-i18n="ebk">EBK / Küche:</p>    
               <div class="form__input-group-checkbox">
                 <label class="container">
                   <input type="checkbox" id="form__checkbox7" name="ebk" value="on">
@@ -273,7 +273,7 @@
               </div>
             </label>
             <label>          
-              <p>Aufzug:</p>    
+              <p data-i18n="aufzug">Aufzug:</p>    
               <div class="form__input-group-checkbox">
                 <label class="container">
                   <input type="checkbox" id="form__checkbox8" name="aufzug" value="on">
@@ -286,361 +286,360 @@
           </div>
           
           
-          <h2>Aktuelle Situation</h2>
+          <h2 data-i18n="aktuelle_situation">Aktuelle Situation</h2>
           <div class="form__input-group">
             <label>
-              Aktueller Vermieter (Firma):
+              <span data-i18n="vermieter_firma">Aktueller Vermieter (Firma):</span>
               <input class="input" type="text" name="vermieter_firma" >
             </label>
           
             <div class="rb">
-              <label>Hatten Sie Schwierigkeiten mit ihrem Vermieter?</label>
+              <label><span data-i18n="vermieter_schwierigkeiten">Hatten Sie Schwierigkeiten mit ihrem Vermieter?</span></label>
               <div class="radio-button-container">
                 <div class="radio-button">
                   <input type="radio" name="vermieter_schwierigkeiten" class="radio-button__input" id="vermieterJa" value="Ja" >
                   <label class="radio-button__label" for="vermieterJa">
                     <span class="radio-button__custom"></span>
-                    <p>Ja</p>
+                    <p data-i18n="ja">Ja</p>
                   </label>
                 </div>
                 <div class="radio-button">
                   <input type="radio" name="vermieter_schwierigkeiten" class="radio-button__input" id="vermieterNein" value="Nein">
                   <label class="radio-button__label" for="vermieterNein">
                     <span class="radio-button__custom"></span>
-                    <p>Nein</p>
+                    <p data-i18n="nein">Nein</p>
                   </label>
                 </div>
               </div>
             </div>
           
             <div class="rb">
-              <label>Haben Sie einen Wohnberechtigungsschein?</label>
+              <label><span data-i18n="berechtigung">Haben Sie einen Wohnberechtigungsschein?</span></label>
               <div class="radio-button-container">
                 <div class="radio-button">
                   <input type="radio" name="berechtigung" class="radio-button__input" id="berechtigungJa" value="Ja" >
                   <label class="radio-button__label" for="berechtigungJa">
                     <span class="radio-button__custom"></span>
-                    <p>Ja</p>
+                    <p data-i18n="ja">Ja</p>
                   </label>
                 </div>
                 <div class="radio-button">
                   <input type="radio" name="berechtigung" class="radio-button__input" id="berechtigungNein" value="Nein">
                   <label class="radio-button__label" for="berechtigungNein">
                     <span class="radio-button__custom"></span>
-                    <p>Nein</p>
+                    <p data-i18n="nein">Nein</p>
                   </label>
                 </div>
               </div>
             </div>
           
             <label>
-              Grund für den Umzug:
+              <span data-i18n="umzug_grund">Grund für den Umzug:</span></span>
               <input class="input" type="text" name="umzug_grund" >
             </label>
           </div>
-          
-          <h2>Finanzielle Situation</h2>
-          
+                    
+          <h2 data-i18n="finanzielle_situation">Finanzielle Situation</h2>
+
           <div class="rb">
-            <label>Haben Sie Kredite in den letzen 2 Jahren aufgenommen:</label>
+            <label><span data-i18n="kredite_frage">Haben Sie Kredite in den letzen 2 Jahren aufgenommen:</span></label>
             <div class="radio-button-container">
               <div class="radio-button">
-                <input type="radio" name="kredite" class="radio-button__input" id="krediteJa" value="Ja" >
+                <input type="radio" name="kredite" class="radio-button__input" id="krediteJa" value="Ja">
                 <label class="radio-button__label" for="krediteJa">
                   <span class="radio-button__custom"></span>
-                  <p>Ja</p>
+                  <p data-i18n="ja">Ja</p>
                 </label>
               </div>
               <div class="radio-button">
                 <input type="radio" name="kredite" class="radio-button__input" id="krediteNein" value="Nein">
                 <label class="radio-button__label" for="krediteNein">
                   <span class="radio-button__custom"></span>
-                  <p>Nein</p>
+                  <p data-i18n="nein">Nein</p>
                 </label>
               </div>
             </div>
           </div>
           
           <div class="rb">
-            <label>Haben Sie Schwierigkeiten mit der Schufa?</label>
+            <label><span data-i18n="schufa_frage">Haben Sie Schwierigkeiten mit der Schufa?</span></label>
             <div class="radio-button-container">
               <div class="radio-button">
-                <input type="radio" name="schufa" class="radio-button__input" id="schufaJa" value="Ja" >
+                <input type="radio" name="schufa" class="radio-button__input" id="schufaJa" value="Ja">
                 <label class="radio-button__label" for="schufaJa">
                   <span class="radio-button__custom"></span>
-                  <p>Ja</p>
+                  <p data-i18n="ja">Ja</p>
                 </label>
               </div>
               <div class="radio-button">
                 <input type="radio" name="schufa" class="radio-button__input" id="schufaNein" value="Nein">
                 <label class="radio-button__label" for="schufaNein">
                   <span class="radio-button__custom"></span>
-                  <p>Nein</p>
+                  <p data-i18n="nein">Nein</p>
                 </label>
               </div>
             </div>
           </div>
           
           <div class="rb">
-            <label>Haben Sie Schwierigkeiten mit Inkasso?</label>
+            <label><span data-i18n="inkasso_frage">Haben Sie Schwierigkeiten mit Inkasso?</span></label>
             <div class="radio-button-container">
               <div class="radio-button">
-                <input type="radio" name="inkasso" class="radio-button__input" id="inkassoJa" value="Ja" >
+                <input type="radio" name="inkasso" class="radio-button__input" id="inkassoJa" value="Ja">
                 <label class="radio-button__label" for="inkassoJa">
                   <span class="radio-button__custom"></span>
-                  <p>Ja</p>
+                  <p data-i18n="ja">Ja</p>
                 </label>
               </div>
               <div class="radio-button">
                 <input type="radio" name="inkasso" class="radio-button__input" id="inkassoNein" value="Nein">
                 <label class="radio-button__label" for="inkassoNein">
                   <span class="radio-button__custom"></span>
-                  <p>Nein</p>
+                  <p data-i18n="nein">Nein</p>
                 </label>
               </div>
             </div>
           </div>
           
           <div class="rb">
-            <label>Haben Sie Schwierigkeiten mit Ihrer Bank?</label>
+            <label><span data-i18n="bank_frage">Haben Sie Schwierigkeiten mit Ihrer Bank?</span></label>
             <div class="radio-button-container">
               <div class="radio-button">
-                <input type="radio" name="bank" class="radio-button__input" id="bankJa" value="Ja" >
+                <input type="radio" name="bank" class="radio-button__input" id="bankJa" value="Ja">
                 <label class="radio-button__label" for="bankJa">
                   <span class="radio-button__custom"></span>
-                  <p>Ja</p>
+                  <p data-i18n="ja">Ja</p>
                 </label>
               </div>
               <div class="radio-button">
                 <input type="radio" name="bank" class="radio-button__input" id="bankNein" value="Nein">
                 <label class="radio-button__label" for="bankNein">
                   <span class="radio-button__custom"></span>
-                  <p>Nein</p>
+                  <p data-i18n="nein">Nein</p>
                 </label>
               </div>
             </div>
           </div>
           
           <div class="rb">
-            <label>Haben Sie Schwierigkeiten mit dem Jobcenter?</label>
+            <label><span data-i18n="jobcenter_frage">Haben Sie Schwierigkeiten mit dem Jobcenter?</span></label>
             <div class="radio-button-container">
               <div class="radio-button">
-                <input type="radio" name="jobcenter" class="radio-button__input" id="jobcenterJa" value="Ja" >
+                <input type="radio" name="jobcenter" class="radio-button__input" id="jobcenterJa" value="Ja">
                 <label class="radio-button__label" for="jobcenterJa">
                   <span class="radio-button__custom"></span>
-                  <p>Ja</p>
+                  <p data-i18n="ja">Ja</p>
                 </label>
               </div>
               <div class="radio-button">
                 <input type="radio" name="jobcenter" class="radio-button__input" id="jobcenterNein" value="Nein">
                 <label class="radio-button__label" for="jobcenterNein">
                   <span class="radio-button__custom"></span>
-                  <p>Nein</p>
+                  <p data-i18n="nein">Nein</p>
                 </label>
               </div>
             </div>
           </div>
           
           <div class="rb">
-            <label>Haben Sie Schwierigkeiten mit andern Ämtern?</label>
+            <label><span data-i18n="aemter_frage">Haben Sie Schwierigkeiten mit andern Ämtern?</span></label>
             <div class="radio-button-container">
               <div class="radio-button">
-                <input type="radio" name="aemter" class="radio-button__input" id="aemterJa" value="Ja" >
+                <input type="radio" name="aemter" class="radio-button__input" id="aemterJa" value="Ja">
                 <label class="radio-button__label" for="aemterJa">
                   <span class="radio-button__custom"></span>
-                  <p>Ja</p>
+                  <p data-i18n="ja">Ja</p>
                 </label>
               </div>
               <div class="radio-button">
                 <input type="radio" name="aemter" class="radio-button__input" id="aemterNein" value="Nein">
                 <label class="radio-button__label" for="aemterNein">
                   <span class="radio-button__custom"></span>
-                  <p>Nein</p>
+                  <p data-i18n="nein">Nein</p>
                 </label>
               </div>
             </div>
           </div>
           
           
-          <h2>Einkünfte</h2>
-          <h3>Beruf:</h3>
+          
+          <h2 data-i18n="einkuenfte">Einkünfte</h2>
+          <h3 data-i18n="beruf">Beruf:</h3>
           <div class="rb"> 
-            <label>Sind Sie in einem Beruf tätig? (Arbeit, Minijob, Aushilfe…)</label>
+            <label><span data-i18n="beruf_taetig_frage">Sind Sie in einem Beruf tätig? (Arbeit, Minijob, Aushilfe…)</span></label>
             <div class="radio-button-container">
               <div class="radio-button">
                 <input type="radio" name="berufTaetig" class="radio-button__input" id="berufTaetigJa" value="Ja" >
                 <label class="radio-button__label" for="berufTaetigJa">
                   <span class="radio-button__custom"></span>
-                  <p>Ja</p>
+                  <p data-i18n="ja">Ja</p>
                 </label>
               </div>
               <div class="radio-button">
                 <input type="radio" name="berufTaetig" class="radio-button__input" id="berufTaetigNein" value="Nein" >
                 <label class="radio-button__label" for="berufTaetigNein">
                   <span class="radio-button__custom"></span>
-                  <p>Nein</p>
+                  <p data-i18n="nein">Nein</p>
                 </label>
               </div>
             </div>
           </div>
           
           <div class="beruf-block">
-            <label>Beruf:<input class="input beruf-input" type="text" name="beruf" ></label>
-            <label>Firma:<input class="input beruf-input" type="text" name="firma" ></label>
-            <label>Arbeitgeber:<input class="input beruf-input" type="text" name="arbeitgeber" ></label>
-            <label>Seit wann?:<input class="input beruf-input" type="text" name="seitWann" ></label>
-            <label>Wenn Nein, was war Ihr letzter Beruf?:<input class="input beruf-input" type="text" name="letzterBeruf" ></label>
+            <label><span data-i18n="beruf_q">Beruf:</span><input class="input beruf-input" type="text" name="beruf" ></label>
+            <label><span data-i18n="firma_q">Firma:</span><input class="input beruf-input" type="text" name="firma" ></label>
+            <label><span data-i18n="arbeitgeber_q">Arbeitgeber:</span><input class="input beruf-input" type="text" name="arbeitgeber" ></label>
+            <label><span data-i18n="seit_wann_q">Seit wann?</span><input class="input beruf-input" type="text" name="seitWann" ></label>
+            <label><span data-i18n="letzter_beruf_q">Wenn Nein, was war Ihr letzter Beruf?</span><input class="input beruf-input" type="text" name="letzterBeruf" ></label>
           
             <div class="rb ">
-              <label>War dieser Beruf in Deutschland ausgeübt?</label>
+              <label><span data-i18n="beruf_deutschland_q">War dieser Beruf in Deutschland ausgeübt?</span></label>
               <div class="radio-button-container">
                 <div class="radio-button">
                   <input type="radio" name="berufInDeutschland" class="radio-button__input beruf-input" id="berufInDeutschlandJa" value="Ja" >
                   <label class="radio-button__label" for="berufInDeutschlandJa">
                     <span class="radio-button__custom"></span>
-                    <p>Ja</p>
+                    <p data-i18n="ja">Ja</p>
                   </label>
                 </div>
                 <div class="radio-button">
                   <input type="radio" name="berufInDeutschland" class="radio-button__input beruf-input" id="berufInDeutschlandNein" value="Nein" >
                   <label class="radio-button__label" for="berufInDeutschlandNein">
                     <span class="radio-button__custom"></span>
-                    <p>Nein</p>
+                    <p data-i18n="nein">Nein</p>
                   </label>
                 </div>
               </div>
             </div>
-            
-            <label>Wenn Nein, wo?: <input class="input beruf-input" type="text" name="woLetzterBeruf" ></label>
-            
+          
+            <label><span data-i18n="wo_letzter_beruf_q">Wenn Nein, wo?</span><input class="input beruf-input" type="text" name="woLetzterBeruf" ></label>
+          
             <div class="rb">
-              <label>Wird dieser Beruf in Deutschland anerkannt?</label>
+              <label><span data-i18n="anerkannt_beruf_q">Wird dieser Beruf in Deutschland anerkannt?</span></label>
               <div class="radio-button-container">
                 <div class="radio-button">
                   <input type="radio" name="anerkanntBeruf" class="radio-button__input beruf-input" id="anerkanntBerufJa" value="Ja" >
                   <label class="radio-button__label" for="anerkanntBerufJa">
                     <span class="radio-button__custom"></span>
-                    <p>Ja</p>
+                    <p data-i18n="ja">Ja</p>
                   </label>
                 </div>
                 <div class="radio-button">
                   <input type="radio" name="anerkanntBeruf" class="radio-button__input beruf-input" id="anerkanntBerufNein" value="Nein" >
                   <label class="radio-button__label" for="anerkanntBerufNein">
                     <span class="radio-button__custom"></span>
-                    <p>Nein</p>
+                    <p data-i18n="nein">Nein</p>
                   </label>
                 </div>
               </div>
             </div>
           </div>
           
-          <h3>Sonstige Einkommen</h3>
+          <h3 data-i18n="sonstige_einkommen">Sonstige Einkommen</h3>
           <div>
             <div class="rb">
-              <label>Erhalten Sie Sozialleistungen? Bescheid vorlegen!</label>
+              <label><span data-i18n="sozialleistungen_frage">Erhalten Sie Sozialleistungen? Bescheid vorlegen!</span></label>
               <div class="radio-button-container">
                 <div class="radio-button">
                   <input type="radio" name="sozialleistungen" class="radio-button__input" id="sozialleistungenJa" value="Ja" >
                   <label class="radio-button__label" for="sozialleistungenJa">
                     <span class="radio-button__custom"></span>
-                    <p>Ja</p>
+                    <p data-i18n="ja">Ja</p>
                   </label>
                 </div>
                 <div class="radio-button">
                   <input type="radio" name="sozialleistungen" class="radio-button__input" id="sozialleistungenNein" value="Nein" >
                   <label class="radio-button__label" for="sozialleistungenNein">
                     <span class="radio-button__custom"></span>
-                    <p>Nein</p>
+                    <p data-i18n="nein">Nein</p>
                   </label>
                 </div>
               </div>
             </div>            
-            <label><input type="checkbox" name="sozialleistungen"> Sozialleistungen</label>
-            <label>ALG 1/2: <input class="input" type="number" name="alg" ></label>
-            <label>Krankengeld: <input class="input" type="number" name="krankengeld" ></label>
-            <label>Rente/Erwerbsminderung: <input class="input" type="number" name="rente" ></label>
-            <label>Unterhaltsvorschuss: <input class="input" type="number" name="unterhalt" ></label>
-            <label>Wohngeld: <input class="input" type="number" name="wohngeld" ></label>
-            <label>Sonstige: <input class="input" type="number" name="sonstige" ></label>
+          
+            <label><input type="checkbox" name="sozialleistungen"> <span data-i18n="sozialleistungen">Sozialleistungen</span></label>
+            <label><span data-i18n="alg">ALG 1/2:</span> <input class="input" type="number" name="alg" ></label>
+            <label><span data-i18n="krankengeld">Krankengeld:</span> <input class="input" type="number" name="krankengeld" ></label>
+            <label><span data-i18n="rente">Rente/Erwerbsminderung:</span> <input class="input" type="number" name="rente" ></label>
+            <label><span data-i18n="unterhalt">Unterhaltsvorschuss:</span> <input class="input" type="number" name="unterhalt" ></label>
+            <label><span data-i18n="wohngeld">Wohngeld:</span> <input class="input" type="number" name="wohngeld" ></label>
+            <label><span data-i18n="sonstige">Sonstige:</span> <input class="input" type="number" name="sonstige" ></label>
           </div>
           
-
-
-          <h3>Nettoeinkommen</h3>
+          <h3 data-i18n="nettoeinkommen">Nettoeinkommen</h3>
           <div>
-            <label>Monatliches Gesamteinkommen der Familie (Netto): 
-              <input class="input" type="number" name="gesamteinkommen" >
-            </label>
+            <label><span data-i18n="gesamteinkommen_q">Monatliches Gesamteinkommen der Familie (Netto):</span> 
+              <input class="input" type="number" name="gesamteinkommen" ></label>
           </div>
           
-          <h2>Sonstiges</h2>
+          <h2 data-i18n="sonstiges">Sonstiges</h2>
           <div>
             <div class="rb">
-              <label>Sind sie Wohnungssuchend gemeldet?</label>
+              <label><span data-i18n="wohnungssuchend_q">Sind sie Wohnungssuchend gemeldet?</span></label>
               <div class="radio-button-container">
                 <div class="radio-button">
                   <input type="radio" name="anerkannt" class="radio-button__input" id="anerkanntJa" value="Ja" >
                   <label class="radio-button__label" for="anerkanntJa">
                     <span class="radio-button__custom"></span>
-                    <p>Ja</p>
+                    <p data-i18n="ja">Ja</p>
                   </label>
                 </div>
                 <div class="radio-button">
                   <input type="radio" name="anerkannt" class="radio-button__input" id="anerkanntNein" value="Nein">
                   <label class="radio-button__label" for="anerkanntNein">
                     <span class="radio-button__custom"></span>
-                    <p>Nein</p>
+                    <p data-i18n="nein">Nein</p>
                   </label>
                 </div>
               </div>
             </div>
-            
-            <label>Bei welchen Unternehmen? 
-              <input class="input" type="text" name="unternehmen" >
+          
+            <label><span data-i18n="unternehmen_q">Bei welchen Unternehmen?</span> 
+             <input class="input" type="text" name="unternehmen" >
             </label>
-            <label>Seit Wann? 
+            <label><span data-i18n="seit_wann2_q">Seit Wann?</span> 
               <input class="input" type="text" name="seitWann2" >
             </label>
           </div>
           
-          <h2>Zu den Weiteren Personen:</h2>
-          <p>Bitte geben Sie hier die Namentlichen Angaben über weitere Personen des Haushaltes ein.<br>( z. B. Partner, Kinder, oder weitere Personen. )</p>
+          
+          <h2 data-i18n="weitere_personen">Zu den Weiteren Personen:</h2>
+          <p data-i18n="weitere_personen_beschr">Bitte geben Sie hier die Namentlichen Angaben über weitere Personen des Haushaltes ein.<br>( z. B. Partner, Kinder, oder weitere Personen. )</p>
           <div>
             <table id="personTable" class="person-table">
               <thead>
                 <tr>
-                  <th class="column-header">Name</th>
-                  <th class="column-header">Vorname</th>
-                  <th class="column-header">Geb. am</th>
-                  <th class="column-header">Tätigkeit</th>
-                  <th class="column-header">Aktion</th>
+                  <th class="column-header" data-i18n="name">Name</th>
+                  <th class="column-header" data-i18n="vorname">Vorname</th>
+                  <th class="column-header" data-i18n="geb_am">Geb. am</th>
+                  <th class="column-header" data-i18n="taetigkeit">Tätigkeit</th>
+                  <th class="column-header" data-i18n="aktion">Aktion</th>
                 </tr>
               </thead>
-              <tbody class="person-body">
-              </tbody>
+              <tbody class="person-body"></tbody>
             </table>
-            
-            <button id="addBtn" class="add-button" type="button" onclick="addPerson()">➕ Neue Person hinzufügen</button>
+          
+            <button id="addBtn" class="add-button" type="button" onclick="addPerson()" data-i18n="neue_person_hinzufuegen">➕ Neue Person hinzufügen</button>
           </div>
           
-          <h2>Zu Sozialeinkommen:</h2>
-          <p>Bitte geben Sie hier die entsprechenden Ansprechpartner*innen oder Sozialarbeiter an:</p>
+          <h2 data-i18n="sozialeinkommen">Zu Sozialeinkommen:</h2>
+          <p data-i18n="sozialeinkommen_beschr">Bitte geben Sie hier die entsprechenden Ansprechpartner*innen oder Sozialarbeiter an:</p>
           <div>
             <table class="person-table">
               <thead>
                 <tr>
-                  <th class="column-header">Amt:</th>
-                  <th class="column-header">z. B. Jobcenter…</th>
+                  <th class="column-header" data-i18n="amt">Amt:</th>
+                  <th class="column-header" data-i18n="beispiel_amt">z. B. Jobcenter…</th>
                 </tr>
               </thead>
               <tbody class="person-body">
                 <tr>
-                  <td>Persönlicher Ansprechpartner*in</td>
-                  <td><input type="text" name="field1" ></td>
+                  <td data-i18n="ansprechpartner">Persönlicher Ansprechpartner*in</td>
+                  <td><input type="text" name="field1"></td>
                 </tr>
                 <tr>
-                  <td>Sozialarbeiter ( Finanzen ) </td>
-                  <td><input type="text" name="field2" ></td>
+                  <td data-i18n="sozialarbeiter_finanzen">Sozialarbeiter ( Finanzen )</td>
+                  <td><input type="text" name="field2"></td>
                 </tr>
               </tbody>
             </table>
@@ -656,11 +655,9 @@
                   </svg>
                 </label>
               </div>
-              <p>Mit Abschluss des Mietvertrages verpflichtet sich der Kunde, die Dienstleistungen der Firma Movia in
-                Anspruch zu nehmen. Dies beinhaltet die verbindliche Mitgliedschaft als Kunde sowie die Verpflichtung
-                zur Zeichnung und fristgerechten Einzahlung der im Einzelfall schriftlich vereinbarten Geschäftsanteile
-                oder Gebühren. Die konkreten Modalitäten werden zwischen dem Kunden und der Firma Movia in einem
-                separaten Schriftstück verbindlich geregelt.</p>
+              <p data-i18n="checkbox_m_text">
+                Mit Abschluss des Mietvertrages verpflichtet sich der Kunde, die Dienstleistungen der Firma Movia in Anspruch zu nehmen. Dies beinhaltet die verbindliche Mitgliedschaft als Kunde sowie die Verpflichtung zur Zeichnung und fristgerechten Einzahlung der im Einzelfall schriftlich vereinbarten Geschäftsanteile oder Gebühren. Die konkreten Modalitäten werden zwischen dem Kunden und der Firma Movia in einem separaten Schriftstück verbindlich geregelt.
+              </p>
             </label>
           
             <label class="lb">          
@@ -672,14 +669,9 @@
                   </svg>
                 </label>
               </div>
-              <p>Ich/wir ermächtige/n hiermit die Firma Movia, Auskünfte über meine/unsere Bonität bei entsprechend
-                autorisierten Auskunfteien einzuholen.
-                Ich/wir stimme/n zu, dass meine/unsere personenbezogenen Daten im Falle eines Zustandekommens
-                eines Vertragsverhältnisses für einen Zeitraum von bis zu zwei Jahren gespeichert werden – auch über
-                die Dauer des Vertragsverhältnisses hinaus.
-                Sollte kein Interesse an einer weiteren Wohnungsvermittlung bestehen, bitten wir um schriftliche
-                Mitteilung. In diesem Fall werden sämtliche personenbezogenen Daten gemäß den gesetzlichen
-                Datenschutzbestimmungen umgehend gelöscht.</p>
+              <p data-i18n="checkbox_i_text">
+                Ich/wir ermächtige/n hiermit die Firma Movia, Auskünfte über meine/unsere Bonität bei entsprechend autorisierten Auskunfteien einzuholen. Ich/wir stimme/n zu, dass meine/unsere personenbezogenen Daten im Falle eines Zustandekommens eines Vertragsverhältnisses für einen Zeitraum von bis zu zwei Jahren gespeichert werden – auch über die Dauer des Vertragsverhältnisses hinaus. Sollte kein Interesse an einer weiteren Wohnungsvermittlung bestehen, bitten wir um schriftliche Mitteilung. In diesem Fall werden sämtliche personenbezogenen Daten gemäß den gesetzlichen Datenschutzbestimmungen umgehend gelöscht.
+              </p>
             </label>
           
             <label class="lb">           
@@ -691,21 +683,18 @@
                   </svg>
                 </label>
               </div>
-              <p>Ich/wir erkläre/n mich/uns ausdrücklich damit einverstanden, dass meine/unsere personenbezogenen
-                Daten im Rahmen der Wohnungsvermittlung sowie der damit verbundenen Kommunikation an Dritte –
-                insbesondere potenzielle Vermieter, Wohnungsverwaltungen oder Kooperationspartner – weitergeleitet
-                werden dürfen.
-                Die Datenweitergabe erfolgt ausschließlich zweckgebunden im Zusammenhang mit der Wohnraumsuche
-                und unter Beachtung der geltenden datenschutzrechtlichen Bestimmungen</p>
+              <p data-i18n="checkbox_i2_text">
+                Ich/wir erkläre/n mich/uns ausdrücklich damit einverstanden, dass meine/unsere personenbezogenen Daten im Rahmen der Wohnungsvermittlung sowie der damit verbundenen Kommunikation an Dritte – insbesondere potenzielle Vermieter, Wohnungsverwaltungen oder Kooperationspartner – weitergeleitet werden dürfen. Die Datenweitergabe erfolgt ausschließlich zweckgebunden im Zusammenhang mit der Wohnraumsuche und unter Beachtung der geltenden datenschutzrechtlichen Bestimmungen.
+              </p>
             </label>
           </div>
           
           <div class="form-row">
             <div class="form-block">
               <label>
-                <input style="width: 100px; height: 22px; " class="input" type="text" name="datum" >
+                <input style="width: 100px; height: 22px;" class="input" type="text" name="datum" >
               </label>
-              <p style="width: 100px;" class="form-paragraph">Ort / Datum :</p>
+              <p style="width: 100px;" class="form-paragraph" data-i18n="label_datum">Ort / Datum :</p>
             </div>
             <div class="form-block">
               <div class="form__input-group-checkbox">
@@ -714,13 +703,15 @@
                   <svg viewBox="0 0 64 64" height="12px" width="12px">
                     <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" class="path"></path>
                   </svg>
-                  <p style="display: inline;">Ich stimme zu</p>
+                  <p style="display: inline;" data-i18n="ich_stimme_zu">Ich stimme zu</p>
                 </label>
               </div>
-              <p class="form-paragraph">Unterschrift des Antragstellers</p>
+              <p class="form-paragraph" data-i18n="label_signature">Unterschrift des Antragstellers</p>
             </div>
           </div>                    
-          <button type="submit">Absenden</button>
+          
+          <button type="submit" class="form__button-submit" data-i18n="absenden">Absenden</button>
+          
         </form>
       </div>
     </main>
@@ -742,7 +733,7 @@
       <div class="message" data-i18n></div>
       <div class="progress-line"></div>
     </div>
-
+    <script src="../js/i18n.js"></script>
     <script src="../js/formSumbit.js"></script>
     <script src="../js/table.js"></script>
     <script src="../js/cookie.js"></script>
